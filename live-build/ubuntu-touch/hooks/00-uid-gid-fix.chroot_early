@@ -3,10 +3,10 @@
 ERRCNT=""
 
 # Known good post-debootstrap values
-passwd_bootstrap="1050cdb2fcde4d10c86399616f64dfdb"
-shadow_bootstrap="7fa48d7fb0e3a1ede9c98ff7b1b33622"
-group_bootstrap="63c26ba30ffcd19be36f02a88621ab91"
-gshadow_bootstrap="e42acfd7c494c6085b5f3d2b1e353995"
+passwd_bootstrap="7d89b96d37aab3fd22e4570862e3a8eb"
+shadow_bootstrap="4627fdc1f1f2712bc52544d5501bcf81"
+group_bootstrap="ffbe05611b49480cb289f343a67d7e7b"
+gshadow_bootstrap="46121fc1a7d95f37e7a3fb21db8061e8"
 
 # Current post-debootstrap values
 passwd_hash=$(set -- $(md5sum /etc/passwd) && echo $1)
@@ -290,9 +290,9 @@ if [ -n "$ERRCNT" ]; then
         echo "Please check also if a maintainer script of the package" >&2
         echo "that added these entries perhaps created a home directory and," >&2
         echo "if needed, add code for creation of it to the above hook" >&2
-	# Temp remove until we find a better method then updating this eveytime we change something	
+	# Temp remove until we find a better method then updating this eveytime we change something
 	# TODO
-        #exit 1
+        exit 1
 fi
 
 # Create some missing directories
