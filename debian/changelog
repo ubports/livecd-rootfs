@@ -1,0 +1,3893 @@
+livecd-rootfs (2.300.2+vivid19ubports5) vivid; urgency=medium
+
+  * Remove hardcoded packages that goes into costum so they lands into main rootfs
+
+ -- Marius Gripsgard <mariogrip@ubuntu.com>  Thu, 08 Jun 2017 00:25:41 +0200
+
+livecd-rootfs (2.300.2+vivid19ubports4) vivid; urgency=medium
+
+  * remove hash checks until we find a better method then updating this eveytime we change something 
+
+ -- Marius Gripsgard <mariogrip@ubuntu.com>  Tue, 23 May 2017 02:52:48 +0200
+
+livecd-rootfs (2.300.2+vivid19ubports3) vivid; urgency=medium
+
+  * remove post-debootstrap hash checks until we find a better method then updating this eveytime we change something 
+
+ -- Marius Gripsgard <mariogrip@ubuntu.com>  Tue, 23 May 2017 00:27:31 +0200
+
+livecd-rootfs (2.300.2+vivid19ubports2) vivid; urgency=medium
+
+  * Allow unauthenticated clicks 
+
+ -- Marius Gripsgard <mariogrip@ubuntu.com>  Fri, 05 May 2017 02:11:31 +0200
+
+livecd-rootfs (2.300.2+vivid19ubports1) vivid; urgency=medium
+
+  * Replace clicks url with ubports url
+  * Remove building/fetching of android/kernel/recovery images
+
+ -- Marius Gripagard <mariogrip@ubuntu.com>  Fri, 05 May 2017 01:36:18 +0200
+
+livecd-rootfs (2.300.2+vivid19) vivid; urgency=medium
+
+  * Add additional hints for the i386 builds to make sure apt is not confused
+    with all the -gles dependencies.
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@ubuntu.com>  Fri, 30 Sep 2016 11:49:23 +0200
+
+livecd-rootfs (2.300.2+vivid18) vivid; urgency=medium
+
+  * Remove the ubuntu-pd project from the scripts
+  * Add instead an ubuntu-touch-custom project for custom re-builds of
+    ubuntu-touch
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@ubuntu.com>  Wed, 06 Jul 2016 12:56:26 +0200
+
+livecd-rootfs (2.300.2+vivid17) vivid; urgency=medium
+
+  [ Tony Espy ]
+  * Removing ubuntu-touch 45-add-sudo-group-nm.chroot as it's now provided by
+    NetworkManager 1.2.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 03 May 2016 11:07:10 +0200
+
+livecd-rootfs (2.300.2+vivid16) vivid; urgency=medium
+
+  * add dhcpd to passwd,groups,shadow and gshadow files by default
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 02 May 2016 14:02:39 +0200
+
+livecd-rootfs (2.300.2+vivid15) vivid; urgency=medium
+
+  [ Xavi Garcia ]
+  * Adding a new hook to change the configuration file for upower.
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@ubuntu.com>  Wed, 30 Mar 2016 16:29:40 +0200
+
+livecd-rootfs (2.300.2+vivid14) vivid; urgency=medium
+
+  * Move the new touch click apps (unav, dekko, calendar) to the custom
+    tarball.
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@ubuntu.com>  Tue, 15 Mar 2016 13:15:43 +0100
+
+livecd-rootfs (2.300.2+vivid13) vivid; urgency=medium
+
+  * Remove the manta device from the list of touchsubarches as we're not
+    building its kernel anymore (LP: #1553069).
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@ubuntu.com>  Fri, 04 Mar 2016 09:57:05 +0100
+
+livecd-rootfs (2.300.2+vivid12) vivid; urgency=medium
+
+  * live-build/ubuntu-touch/hooks/01-setup_user.chroot:
+    - Change real name for phablet user to "Ubuntu" (LP: #1536714).
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@ubuntu.com>  Thu, 04 Feb 2016 17:46:00 +0100
+
+livecd-rootfs (2.300.2+vivid11) vivid; urgency=medium
+
+  * Add the deb-src entry for extra-ppas to sources.list (LP: #1482703).
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@canonical.com>  Tue, 24 Nov 2015 17:15:44 +0100
+
+livecd-rootfs (2.300.2+vivid10) vivid; urgency=medium
+
+  * live-build/ubuntu-touch/hooks/99-remove-lists.binary:
+    - Move the 99-remove-lists.chroot hook to the binary stage as most
+      apt lists get pulled in later on
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@canonical.com>  Thu, 01 Oct 2015 16:31:06 +0200
+
+livecd-rootfs (2.300.2+vivid9) vivid; urgency=medium
+
+  * live-build/ubuntu-touch/hooks/99-remove-lists.chroot:
+    - Add a hook for touch/pd to remove apt lists during build
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@canonical.com>  Mon, 28 Sep 2015 17:07:08 +0200
+
+livecd-rootfs (2.300.2+vivid8) vivid; urgency=medium
+
+  * Add the ubuntu-pd project.
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@canonical.com>  Mon, 21 Sep 2015 17:26:02 +0200
+
+livecd-rootfs (2.300.2+vivid7) vivid; urgency=medium
+
+  * live-build/ubuntu-touch/hooks/03-etc-writable.chroot: Set up /etc/whoopsie
+    too. (LP: #1437633)
+
+ -- Iain Lane <iain.lane@canonical.com>  Fri, 11 Sep 2015 15:25:11 +0100
+
+livecd-rootfs (2.300.2+vivid6) vivid; urgency=medium
+
+  * dropp grouper from touch arches
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 05 Aug 2015 22:49:31 +0200
+
+livecd-rootfs (2.300.2+vivid5) vivid; urgency=medium
+
+  * just rip out the whole sources.list mangling for the android package
+    install, this livecd-rootfs version is only used in the PPA anyway so we
+    can well work with the default sources.list here.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 05 Aug 2015 20:36:25 +0200
+
+livecd-rootfs (2.300.2+vivid4) vivid; urgency=medium
+
+  * switch the check from EXTRA_PPAS to config/archives/extra-ppas.list.chroot
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 05 Aug 2015 19:12:44 +0200
+
+livecd-rootfs (2.300.2+vivid3) vivid; urgency=medium
+
+  * make sure we download the android package from the overlay PPA if it is
+    enabled in the EXTRA_PPAS variable (LP: #1481456)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 05 Aug 2015 17:36:13 +0200
+
+livecd-rootfs (2.300.2+vivid2) vivid; urgency=medium
+
+  * Split out the youtube scope to the custom tarball since some images can't
+    have it pre-installed (e.g. arale China images).
+
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@canonical.com>  Thu, 09 Jul 2015 00:11:38 +0200
+
+livecd-rootfs (2.300.2+vivid1) vivid; urgency=medium
+
+  * allow install of "multi" click packages in 60-install-click.chroot on
+    ubuntu-touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 19 Jun 2015 10:14:34 +0200
+
+livecd-rootfs (2.300.2) vivid; urgency=medium
+
+  * live-build/auto/config: Conditionalize copying extra-ppas.pref.chroot.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Thu, 30 Apr 2015 07:54:43 -0600
+
+livecd-rootfs (2.300.1) vivid; urgency=medium
+
+  * live-build/auto/config: Handle applying priorities to EXTRA_PPAS
+    via the extra_ppa="user/ppaname:priority" syntax (LP: #1450257)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 29 Apr 2015 12:56:58 -0600
+
+livecd-rootfs (2.300) vivid; urgency=medium
+
+  * live-build/ubuntu-core/hooks/11-remove-extra-packages.chroot: revert
+    removal of python from the rootfs temporarily, since we've manually
+    re-added it to the seed in order to make walinuxagent work again on the
+    azure image.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Wed, 22 Apr 2015 16:03:42 -0700
+
+livecd-rootfs (2.299) vivid; urgency=medium
+
+  * Fix snappy motd to not reference 'development', which isn't always true.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 17 Apr 2015 13:29:03 -0600
+
+livecd-rootfs (2.298) vivid; urgency=low
+
+  * live-build/auto/config:
+    - remove resolvconf, click-apparmor, dosfstools
+    - shuffle install order around
+  * snappy:
+    + remove click-hook-framework
+    + remove /etc/init.d/grub-common 
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 16 Apr 2015 09:37:34 -0500
+
+livecd-rootfs (2.297) vivid; urgency=low
+
+  * fix device.tar.gz generation for snappy
+  * lp:~ubuntu-on-ec2/livecd-rootfs/cpc2:
+    - build cloud based images using livecd-rootfs
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 09 Apr 2015 14:54:23 +0200
+
+livecd-rootfs (2.296) vivid; urgency=low
+
+  * ubuntu-core:
+    - update passwd/group etc for new syslog user
+    - remove live-build/ubuntu-core/hooks/15-pycompile-snappy.chroot
+    - merged lp:~snappy-dev/livecd-rootfs/core_update
+      to generate device tar conform hardware.yaml
+    - add compability handling for current u-d-f/grub when extracting
+      the device tarball
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 30 Mar 2015 20:40:25 +0200
+
+livecd-rootfs (2.295) vivid; urgency=medium
+
+  * forcefully add ubuntu-system-settings-online-accounts to ubuntu-touch
+    builds to make sure the dependency is fulfilled in advance
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 25 Mar 2015 10:26:40 +0100
+
+livecd-rootfs (2.294) vivid; urgency=medium
+
+  * add more verbosity to the copy command for android fragments in
+    ubuntu-touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 13 Mar 2015 11:10:33 +0100
+
+livecd-rootfs (2.293) vivid; urgency=low
+
+  [ Michael Vogt ]
+  * live-build/ubuntu-core/hooks/11-remove-extra-packages.chroot:
+    - remove libpython2.7 and friends as welll
+
+  [ Oliver Grawert ]
+  * remove all .override files in teh build chroot, else teh buildd machines
+    fall over.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 10 Mar 2015 16:21:36 +0100
+
+livecd-rootfs (2.292) vivid; urgency=low
+
+  [ Michael Vogt ]
+  * live-build/ubuntu-core/hooks/11-remove-extra-packages.chroot:
+    - python2 is no longer required on a snappy system
+  * live-build/ubuntu-core/hooks/00-uid-gid-fix.chroot_early:
+    - updated md5sums as the ordering of users/groups has changed with
+      the new systemd-sysv
+
+  [ Oliver Grawert ]
+  * live-build/ubuntu-touch/hooks/00-uid-gid-fix.chroot_early:
+    bump all md5sums to new values, now that debootstrap installs systemd-sysv
+    instead of upstart the ordering and thus the group numbering has changed
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 10 Mar 2015 12:07:16 +0100
+
+livecd-rootfs (2.291) vivid; urgency=low
+
+  [ Michael Vogt ]
+  * do not leave some packages in ^rc state on snappy/ubuntu-core
+    (LP: #1428115). Thanks to Daniel Holbach
+
+  [ Oliver Grawert ]
+  * put FLASH_KERNEL_SKIP=true into /etc/environment on phones, this will
+    prevent the systems from trying to flash an updated initrd automatically
+    in case you call update-initramfs or install your own kernel package on a
+    nexus device where this is supported, please call flash-kernel manually
+    after unsetting the variable in your work environment.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 06 Mar 2015 21:14:11 +0100
+
+livecd-rootfs (2.290) vivid; urgency=medium
+
+  * touch: Explicitly uninstall systemd-sysv, to help apt to install upstart
+    when the preferred "init" alternative is systemd-sysv. Also explicitly
+    install packagekit to help the problem resolver. Thanks Colin Watson!
+    (LP: #1428026)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 04 Mar 2015 12:04:22 +0100
+
+livecd-rootfs (2.289) vivid; urgency=medium
+
+  * add info about /var/log ownership so it ends up in the ubuntu-touch build
+    logs
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 03 Mar 2015 15:10:07 +0100
+
+livecd-rootfs (2.288) vivid; urgency=low
+
+  [ Michael Vogt ]
+  * add dosfstools on snappy to ensure systemd can fsck the /boot
+    partition
+
+  [ Ricardo Salveti de Araujo ]
+  * touch: don't depend on mir-platform-graphics-android and let that to be
+    handled by the seeds (they can't stop bumping the package name and the
+    graphics-mesa package doesn't cause any harm)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Sun, 01 Mar 2015 01:27:11 -0300
+
+livecd-rootfs (2.287) vivid; urgency=low
+
+  [ Michael Vogt ]
+  * add even more verbose output to
+    live-build/ubuntu-core/hooks/00-uid-gid-fix.chroot_early
+    (thanks Oliver!)
+  * live-build/ubuntu-core/hooks/00-uid-gid-fix.chroot_early:
+    - adjust the {group,gshadow}_bootstrap values. The audio group
+      used to be gid 1005 after the bootstrap and is now 29.
+  * live-build/auto/config:
+    - add snappy-ubuntu
+
+  [ Oliver Grawert ]
+  * make sure /var/log is always owned by the syslog group on touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 18 Feb 2015 15:03:54 +0100
+
+livecd-rootfs (2.286) vivid; urgency=medium
+
+  * touch: forcing package mir-platform-graphics-android to see if we're able
+    to remove the dependency on the mesa one (until mir is properly fixed)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Thu, 12 Feb 2015 03:05:31 -0200
+
+livecd-rootfs (2.285) vivid; urgency=medium
+
+  * touch: removing dependencies on a specific mir platform driver as mir can
+    now identify and load the correct driver during runtime
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Wed, 11 Feb 2015 23:35:42 -0200
+
+livecd-rootfs (2.284) vivid; urgency=medium
+
+  * bump the gshadow hash in 00-uid-gid-fix.chroot_early too
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 11 Feb 2015 21:07:27 +0100
+
+livecd-rootfs (2.283) vivid; urgency=low
+
+  [ Michael Vogt ]
+  * add more verbose output to
+    live-build/ubuntu-core/hooks/00-uid-gid-fix.chroot_early
+    (thanks Oliver!)
+
+  [ Oliver Grawert ]
+  * make sure to collect all output of all changed files in one go in
+    00-uid-gid-fix.chroot_early, that way we only need to fix it once and have
+    all info in the logs
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 11 Feb 2015 18:25:11 +0100
+
+livecd-rootfs (2.282) vivid; urgency=medium
+
+  * update the passwd hash for changed GID of syslog ... also add output of
+    the respective md5sums to the error message for easier debugging
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 11 Feb 2015 16:46:18 +0100
+
+livecd-rootfs (2.281) vivid; urgency=medium
+
+  * add more verbose output to
+    live-build/ubuntu-touch/hooks/00-uid-gid-fix.chroot_early
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 11 Feb 2015 15:11:51 +0100
+
+livecd-rootfs (2.280) vivid; urgency=medium
+
+  * live-build/ubuntu-core/hooks/02-add_user_to_groups.chroot: use commas
+    instead of spaces.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Wed, 04 Feb 2015 18:03:08 +0100
+
+livecd-rootfs (2.279) vivid; urgency=medium
+
+  * Revert changes to post-debootstrap hashes for core.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Wed, 04 Feb 2015 16:32:09 +0100
+
+livecd-rootfs (2.278) vivid; urgency=medium
+
+  * Add live-build/ubuntu-core/hooks/99zz-check-uid-gid.chroot, copy of
+    live-build/ubuntu-touch/hooks/99zz-check-uid-gid.chroot with just the
+    error message changed. Currently, the passwd/group checks weren't run.
+  * live-build/ubuntu-touch/hooks/00-uid-gid-fix.chroot_early: also add input
+    group.
+  * Core: drop live-build/ubuntu-core/hooks/12-add-docker-user.chroot and move
+    docker user creation to
+    live-build/ubuntu-core/hooks/00-uid-gid-fix.chroot_early; add ubuntu user
+    to docker group in
+    live-build/ubuntu-core/hooks/02-add_user_to_groups.chroot. This fixes
+    static uid/gid maps for docker user/group.
+  * Update post-debootstrap hashes in
+    live-build/ubuntu-core/hooks/00-uid-gid-fix.chroot_early.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Wed, 04 Feb 2015 14:28:37 +0100
+
+livecd-rootfs (2.277) vivid; urgency=medium
+
+  * live-build/ubuntu-core/hooks/00-uid-gid-fix.chroot_early: add new "input"
+    group to etc/group and etc/gshadow static maps.
+  * live-build/ubuntu-core/includes.chroot/etc/resolv.conf: use relative
+    symlink as suggested by lintian.
+  * Bump Standards-Version to 3.9.6.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Wed, 04 Feb 2015 13:32:58 +0100
+
+livecd-rootfs (2.276) vivid; urgency=medium
+
+  [ Mathieu Trudel-Lapierre ]
+  * live-build/auto/config: add config for Ubuntu MATE.
+
+  [ Michael Vogt ]
+  * use generic kernel for all ubuntu-core system-image
+  * live-build/ubuntu-core/hooks/01-setup_user.chroot:
+    - run chpasswd after user moved into /var/lib/extrausers
+  * live-build/ubuntu-core/hooks/01-setup_user.chroot:
+    - run with -e
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Wed, 28 Jan 2015 11:03:08 -0500
+
+livecd-rootfs (2.275+ppa2) vivid; urgency=medium
+
+  * live-build/ubuntu-core/hooks/04-configure_network.chroot: use
+    'allow-hotplug' for the network config, not 'auto', to work around
+    systemd behavior that causes 'auto' to delay the rest of the boot when
+    DHCP is not available on the network.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Wed, 14 Jan 2015 22:49:43 -0800
+
+livecd-rootfs (2.275+ppa1) vivid; urgency=low
+
+  * live-build/ubuntu-core/hooks/00-uid-gid-fix.chroot_early:
+    - port static uid/gid setup from ubuntu-touch
+  * live-build/ubuntu-core/hooks/15-pycompile-snappy.chroot:
+    - byte compile .pyc files for snappy
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 07 Jan 2015 09:36:11 +0100
+
+livecd-rootfs (2.275) vivid; urgency=low
+
+  [ Michael Vogt ]
+  * live-build/ubuntu-core/hooks/00-uid-gid-fix.chroot_early:
+    - port static uid/gid setup from ubuntu-touch
+
+  [ Ricardo Salveti de Araujo ]
+  * Bump the hardcoded libmirplatform driver version for ubuntu-touch
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Wed, 14 Jan 2015 13:31:43 -0200
+
+livecd-rootfs (2.274) vivid; urgency=medium
+
+  [ Michael Vogt ]
+  * live-build/ubuntu-core/hooks/400-create-apt-get-warning.binary:
+    - improve apt-get output
+  * live-build/auto/config:
+    - add click-apparmor for system-image
+  * live-build/ubuntu-core/hooks/400-create-apt-get-warning.binary:
+    - fix incorrect "echo"
+    - add missing wrappers for apt, apt-cache
+    - fix message
+  * live-build/ubuntu-core/hooks/14-set-motd.chroot:
+    - update motd
+
+  [ James Hunt ]
+  * live-build/ubuntu-core/hooks/10-remove-documentation.binary:
+    - compress remaining documentation to save further space.
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 10 Dec 2014 12:57:30 +0100
+
+livecd-rootfs (2.273) vivid; urgency=low
+
+  [ Michael Vogt ]
+  * live-build/ubuntu-core/hooks/14-set-motd.chroot:
+    - set snappy specific motd
+  * live-build/ubuntu-core/hooks/13-set-locale.chroot:
+    - set default locale to C.UTF-8
+
+  [ Oliver Grawert ]
+  * add systemd-journal-remote group to touch builds
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 02 Dec 2014 10:20:28 +0100
+
+livecd-rootfs (2.271) vivid; urgency=medium
+
+  *  bump the hardcoded libmirplatform driver version for ubuntu-touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 27 Nov 2014 16:27:44 +0100
+
+livecd-rootfs (2.270) vivid; urgency=medium
+
+  * bump version of mir alternative in ubuntu-touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 27 Nov 2014 12:37:31 +0100
+
+livecd-rootfs (2.269) vivid; urgency=low
+
+  * live-build/auto/{build,config}:
+    - create device-azure.tar.gz during the build that includes the
+      packages for the azure cloud
+  * live-build/ubuntu-core/hooks/400-create-apt-get-warning.binary:
+    - display helpful message to use snappy when a user tries to use
+      apt-get on a snappy system
+  * live-build/ubuntu-core/hooks/500-move-kernel-to-device-tar.binary:
+    - do the device-azure.tar.gz extraction here
+  * live-build/ubuntu-core/hooks/12-add-docker-user.chroot:
+    - ensure docker group is used
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 24 Nov 2014 08:38:15 +0100
+
+livecd-rootfs (2.268) vivid; urgency=low
+
+  * live-build/ubuntu-core/hooks/09-move-kernel-to-device-tar.binary:
+    - build device tarball with system/ prefix
+    - include /vmlinz, /initrd.img into device tarball
+    - include /boot/abi-* /boot/System.map-*
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 17 Nov 2014 11:27:31 +0100
+
+livecd-rootfs (2.267) vivid; urgency=low
+
+  * live-build/auto/config:
+    - system-image: do not install ubuntu-minimal
+    - system-image: install KERNEL_FLAVOURS=virtual on i386/amd64
+    - system-image: use "--linux-packages=linux-image"
+    - add click-hook-framework
+  * live-build/auto/build:
+    - system-image: collect the deivce.tar.gz
+  * live-build/ubuntu-core/hooks/09-move-kernel-to-device-tar.binary:
+    - create a device.tar.gz from the installed kernel/modules and
+      remove it from the rootfs
+  * live-build/ubuntu-core/hooks/10-remove-documentation.binary:
+    - strip documentation
+  * live-build/ubuntu-core/hooks/11-remove-extra-packages.chroot:
+    - remove extra packages like libicu52/libqt that are still on the 
+      image because vivid system-image has a dependency on u-d-m which
+      depends on libqt
+  * live-build/ubuntu-core/hooks/12-add-docker-user.chroot:
+    - add a docker user/group into the image (this can go once we have
+      a hook for this)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 14 Nov 2014 13:06:19 +0100
+
+livecd-rootfs (2.266) vivid; urgency=medium
+
+  * Move the shorts click package to the custom tarball.  LP: #1386177.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Wed, 12 Nov 2014 23:15:15 -0800
+
+livecd-rootfs (2.265) vivid; urgency=low
+
+  * live-build/ubuntu-core/hooks/03-boot_with_systemd.chroot:
+    - only modify /etc/default/grub if the file exists
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 03 Nov 2014 17:10:57 +0100
+
+livecd-rootfs (2.264) vivid; urgency=low
+
+  * live-build/auto/config:
+    - also install flash-kernel/u-boot-tools in the armhf system-image,
+      thanks to Adam Conrad
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 03 Nov 2014 11:45:00 +0100
+
+livecd-rootfs (2.263) vivid; urgency=medium
+
+  * live-build/auto/config:
+    - explicitly set KERNEL_FLAVOURS=generic to get the right kernel
+      on armhf
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 03 Nov 2014 11:30:02 +0100
+
+livecd-rootfs (2.262) vivid; urgency=medium
+
+  * fix typo in 99zz-check-uid-gid.chroot
+  * add systemd users to group and passwd files on touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 29 Oct 2014 19:54:28 +0100
+
+livecd-rootfs (2.261) vivid; urgency=medium
+
+  * make diff not exit 1 if we show the diff for passwd, shadow, group etc
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 29 Oct 2014 16:44:25 +0100
+
+livecd-rootfs (2.260) vivid; urgency=medium
+
+  * properly redirect error output in 99zz-check-uid-gid.chroot so it ends up
+    in the log files.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 29 Oct 2014 13:19:46 +0100
+
+livecd-rootfs (2.259) vivid; urgency=medium
+
+  * merge ubuntu-core system-image fixes from the PPA:
+    - add ubuntu-core-libs
+    - add packages not (yet) in the ubuntu-core seed
+    - fix resolv.conf
+    - make timezone, localtime and hostname writable for cloud-init
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 29 Oct 2014 11:05:29 +0100
+
+livecd-rootfs (2.258) vivid; urgency=medium
+
+  * collect changes to /etc/{passwd|shadow|group|gshadow} in the error output
+    in case they got updated on ubuntu-touch. Give a proper hint what to
+    change to make the error go away on the next run.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 29 Oct 2014 09:49:56 +0100
+
+livecd-rootfs (2.257) utopic; urgency=medium
+
+  * Drop the click packages moved in 2.255 from the rootfs, leaving them
+    only in the custom tarball.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 15 Oct 2014 21:07:38 +0100
+
+livecd-rootfs (2.256) utopic; urgency=medium
+
+  * Fix directory layout of custom tarball.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 15 Oct 2014 17:12:23 +0100
+
+livecd-rootfs (2.255) utopic; urgency=medium
+
+  [ Steve Langasek ]
+  * Add support to the ubuntu-touch target to generate a separate custom
+    tarball as part of the build, moving most click packages into it.
+
+  [ Colin Watson ]
+  * Temporarily install the to-be-moved click packages in both core and
+    custom databases, to simplify the landing process.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 14 Oct 2014 00:12:08 +0100
+
+livecd-rootfs (2.254) utopic; urgency=medium
+
+  * force the right alternative when the libmir*-android packages are
+    installed, so that accidentially pulled in -mesa versions will not provide
+    the default alternatives for them in ubuntu-touch images
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sat, 11 Oct 2014 13:09:49 +0200
+
+livecd-rootfs (2.253) utopic; urgency=medium
+
+  * Update hardcoded libmir*-android installations for Mir 0.8.0.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 11 Oct 2014 08:54:47 +0100
+
+livecd-rootfs (2.252) utopic; urgency=low
+
+  [ James Hunt ]
+  * Convert resolvconf hook from a chroot hook to a binary hook since lb
+    overwrites /etc/resolv.conf after the chroot hooks have run.  * 
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 09 Oct 2014 13:20:40 +0200
+
+livecd-rootfs (2.251) utopic; urgency=low
+
+  * create /etc/hosts for ubuntu-core:system-image
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 09 Oct 2014 09:24:39 +0200
+
+livecd-rootfs (2.250) utopic; urgency=low
+
+  * build system-image without recommends
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 07 Oct 2014 11:44:09 +0200
+
+livecd-rootfs (2.249) utopic; urgency=medium
+
+  * live-build/ubuntu-core/hooks/06-handle_resolvconf.chroot: Remove
+    pre-existing /etc/resolv.conf.
+
+ -- James Hunt <james.hunt@ubuntu.com>  Mon, 06 Oct 2014 13:25:11 +0100
+
+livecd-rootfs (2.248) utopic; urgency=medium
+
+  * live-build/ubuntu-core/hooks/06-handle_resolvconf.chroot: Configure
+    resolv.conf for Ubuntu Core. 
+  * live-build/ubuntu-core/hooks/07-configure-system-image-client.chroot:
+    Configure system-image-cli's client.ini for Ubuntu Core. This can be
+    dropped once bug 1373467 is fixed.
+
+ -- James Hunt <james.hunt@ubuntu.com>  Fri, 03 Oct 2014 15:23:47 +0100
+
+livecd-rootfs (2.247) utopic; urgency=medium
+
+  * live-build/ubuntu-touch/hooks/00-uid-gid-fix.chroot_early:
+    Create some directories which would otherwise go missing due to our
+    pre-created users. (LP: #1374553)
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Fri, 26 Sep 2014 14:41:19 -0400
+
+livecd-rootfs (2.246) utopic; urgency=medium
+
+  * live-build/auto/config: Use ubuntukylin-live task for ubuntukylin, not
+    ubuntu-live (LP: #1372731).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 24 Sep 2014 10:59:55 +0100
+
+livecd-rootfs (2.245) utopic; urgency=medium
+
+  * Add two new hooks for Ubuntu Touch to setup sensible /etc/passwd,
+    /etc/shadow, /etc/group and /etc/gshadow PRIOR to package installation
+    to guarantee user/group ordering on the image and then to check for any
+    unexpected change to those files. (LP: #1332538)
+
+    Any change to either the initial set of users and groups or to the
+    post-package-install set will now be fatal to the image and will require
+    a manual update of the hardcoded user/group list contained in this new
+    chroot_early hook.
+  * Bump dependency on live-build accordingly.
+  * Update the setup_user hook to also take care of gshadow.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Mon, 22 Sep 2014 16:02:58 -0400
+
+livecd-rootfs (2.244) utopic; urgency=medium
+
+  * Substitute DEB_HOST_MULTIARCH into hook scripts at build time, rather
+    than relying on dpkg-architecture (which is in dpkg-dev) to be present
+    in the image.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 23 Sep 2014 16:07:41 +0100
+
+livecd-rootfs (2.243) utopic; urgency=medium
+
+  * Updating apparmor features file for Ubuntu Touch
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Mon, 22 Sep 2014 23:59:25 -0300
+
+livecd-rootfs (2.242) utopic; urgency=medium
+
+  * get-ppa-fingerprint: Adjust use of
+    softwareproperties.ppa.get_ppa_info_from_lp to match the new calling
+    convention in software-properties 0.93.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 17 Sep 2014 11:11:41 +0100
+
+livecd-rootfs (2.241) utopic; urgency=medium
+
+  * live-build/auto/config: Use ubuntukylin-desktop task for ubuntukylin,
+    not ubuntu-desktop.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 10 Sep 2014 10:54:17 +0100
+
+livecd-rootfs (2.240) utopic; urgency=medium
+
+  * live-build/ubuntu-touch/hooks/01-setup_user.chroot:
+    - Don't modify PAM files directly, we'll let ubuntu-touch-session
+      do that for us the proper way.  (LP: #1348637)
+
+ -- Michael Terry <mterry@ubuntu.com>  Wed, 13 Aug 2014 16:37:17 -0400
+
+livecd-rootfs (2.239) utopic; urgency=medium
+
+  * Revert part of the last change to ship the systemd hook as .chroot
+    and not .binary since it doesn't appear to be running properly as a
+    binary hook.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Tue, 05 Aug 2014 13:37:57 -0400
+
+livecd-rootfs (2.238) utopic; urgency=medium
+
+  * ubuntu-core: Fix build failure due to missing /etc/default/grub and
+    provide an fstab that will make systemd happy.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Tue, 05 Aug 2014 11:32:44 -0400
+
+livecd-rootfs (2.237) utopic; urgency=medium
+
+  * ubuntu-core: Add click-systemd to preinstalled image (currently only in
+    a PPA, so can't use tasks for this).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 05 Aug 2014 13:29:22 +0200
+
+livecd-rootfs (2.236) utopic; urgency=medium
+
+  [ James Hunt ]
+  * ubuntu-core:
+    - Perform in-place edit.
+    - Allow variable expansion.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 05 Aug 2014 10:52:55 +0200
+
+livecd-rootfs (2.235) utopic; urgency=medium
+
+  * Only add the ubuntu-core hooks for the system-image subproject.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 05 Aug 2014 08:34:27 +0200
+
+livecd-rootfs (2.234) utopic; urgency=medium
+
+  [ James Hunt ]
+  * ubuntu-core:
+    - Don't remove doc to be kind to devs.
+    - Boot with systemd (temporary method until we have systemd-sysv).
+    - Configure first network interface.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 04 Aug 2014 16:12:43 +0200
+
+livecd-rootfs (2.233) utopic; urgency=medium
+
+  [ Colin Watson ]
+  * live-build/auto/config: Add configuration for new kubuntu-plasma5
+    flavour.
+
+  [ James Hunt ]
+  * ubuntu-core: Run setup hooks as done for ubuntu-touch.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 31 Jul 2014 10:37:18 +0100
+
+livecd-rootfs (2.232) utopic; urgency=medium
+
+  [ James Hunt ]
+  * live-build/auto/config: Enable universe for system-image ubuntu-core
+    sub-project which requires 'system-image-cli'.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 30 Jul 2014 17:56:04 +0100
+
+livecd-rootfs (2.231) utopic; urgency=medium
+
+  * Hard-code installation of libmirclientplatform-android and
+    libmirplatformgraphics-android to avoid accidentally pulling in the
+    -mesa variants that are preferred as dependencies of libmirclient and
+    libmirserver.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 28 Jul 2014 20:17:14 -0700
+
+livecd-rootfs (2.230) utopic; urgency=low
+
+  * lp:~mvo/livecd-rootfs/ubuntu-core-system-image:
+    - install the "ubuntu-core" task and a kernel when building 
+      ubuntu-core with SUBPROJECT=system-image
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 28 Jul 2014 20:10:56 +0200
+
+livecd-rootfs (2.229) utopic; urgency=medium
+
+  [ Michael Terry ]
+  * Don't set an arbitrary password for the phablet user. As we transition
+    to using PAM as the storage medium for the user's password, we can't
+    expect the user to know about the 'phablet' password.
+  * And configure libnss-extrausers to store user password information
+    instead of /etc/shadow.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Thu, 24 Jul 2014 15:49:48 -0700
+
+livecd-rootfs (2.228) utopic; urgency=medium
+
+  * Pass --mirror-binary in the ubuntu-rtm case too; this isn't inherited
+    from the bootstrap mirror.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 23 Jul 2014 11:51:11 +0100
+
+livecd-rootfs (2.227) utopic; urgency=medium
+
+  * Pass --mirror-chroot-security and --mirror-binary-security in the
+    ubuntu-rtm case, as the default of http://security.ubuntu.com/ubuntu/
+    isn't going to have ubuntu-rtm suites.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 23 Jul 2014 11:00:23 +0100
+
+livecd-rootfs (2.226) utopic; urgency=medium
+
+  * Disable apt authentication checks when building ubuntu-rtm images
+    against dogfood (that test archive is signed, but not with a very useful
+    key).
+  * Apply a grievous hack to get debootstrap working against ubuntu-rtm
+    series.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 23 Jul 2014 01:50:21 +0100
+
+livecd-rootfs (2.225) utopic; urgency=medium
+
+  * Use the soon-to-exist ubuntu-rtm archive for ubuntu-touch builds if
+    SUBPROJECT is ubuntu-rtm (or ubuntu-rtm/dogfood for the dogfood
+    version).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 17 Jul 2014 12:50:09 +0100
+
+livecd-rootfs (2.224) utopic; urgency=medium
+
+  * drop extra space in DEFGROUPS variable
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 16 Jul 2014 20:32:58 +0200
+
+livecd-rootfs (2.223) utopic; urgency=medium
+
+  * add android_cache group (GID 2001) so that after we switch developer mode
+    to default to the phablet user it is still possible to adb push image
+    tarballs to the /cache partition
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 16 Jul 2014 14:15:21 +0200
+
+livecd-rootfs (2.222) utopic; urgency=medium
+
+  * Precompiling apparmor policies on touch
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Tue, 15 Jul 2014 17:34:38 -0300
+
+livecd-rootfs (2.221) utopic; urgency=medium
+
+  * Adding android_nvram group to the touch image
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Mon, 30 Jun 2014 00:12:43 +0400
+
+livecd-rootfs (2.220) utopic; urgency=medium
+
+  [ Alfonso Sanchez-Beato (email Canonical) ]
+  * Add media group to touch image
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 27 Jun 2014 16:31:02 +0200
+
+livecd-rootfs (2.219) utopic; urgency=medium
+
+  * Drop fdupes analysis: not widely used any more, can be done separately
+    if needed, and very noisy in build logs.
+  * Make the output kernel/initrd world-readable in a couple more cases,
+    particularly relevant to ubuntu-defaults-image (LP: #1334616).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 26 Jun 2014 12:31:12 +0100
+
+livecd-rootfs (2.218) utopic; urgency=medium
+
+  * Install linux-signed-generic directly in live passes rather than relying
+    on it being in the corresponding tasks.  linux-signed-generic shouldn't
+    be in a task because that expands to ABI-versioned packages, and tasks
+    can't be updated post-release.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 24 Jun 2014 02:18:36 +0100
+
+livecd-rootfs (2.217) utopic; urgency=medium
+
+  * drop swapfile creation for preinstalled images
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 23 Jun 2014 18:35:57 +0200
+
+livecd-rootfs (2.216) utopic; urgency=medium
+
+  * ubuntu-touch: remove the previous ugly hack again ... issue is fixed
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 30 May 2014 13:25:57 +0200
+
+livecd-rootfs (2.215) utopic; urgency=medium
+
+  * ubuntu-touch; DON'T DO THAT AT HOME ! (and keep the kids away) ...
+    hack to remove a bunch of initscripts that currently break writable mode.
+    this needs to be dropped again ASAP (once a proper fix landed) !!
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 30 May 2014 10:09:58 +0200
+
+livecd-rootfs (2.214) utopic; urgency=medium
+
+  * ubuntu-desktop-next: Use the Task fields that the archive now has for this
+    project.
+
+ -- Iain Lane <iain.lane@canonical.com>  Wed, 28 May 2014 10:37:36 +0100
+
+livecd-rootfs (2.213) utopic; urgency=medium
+
+  * The EXTRA_ARCHIVES environment variable defined in 2.212 doesn't quite
+    work properly because it doesn't allow for signing key configuration.
+    Rename it to the more domain-specific EXTRA_PPAS (which is now a
+    space-separated sequence of <ppa-owner>/<ppa-name> pairs), and fetch
+    signing keys for those from Launchpad using python3-software-properties.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 19 May 2014 15:28:35 +0100
+
+livecd-rootfs (2.212) utopic; urgency=medium
+
+  * live-build/auto/config: If EXTRA_ARCHIVES is set in the environment,
+    dump its value into config/archives/extra-archives.list.chroot and
+    config/archives/extra-archives.list.binary.  This makes it easier for a
+    builder to build an image against an additional PPA.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 19 May 2014 12:14:28 +0100
+
+livecd-rootfs (2.211) utopic; urgency=medium
+
+  * Add an ubuntu-desktop-next project for building a desktop flavour
+    including Unity 8 and the applications developed for Ubuntu Touch.
+
+ -- Iain Lane <iain.lane@canonical.com>  Fri, 16 May 2014 17:54:04 +0100
+
+livecd-rootfs (2.210) utopic; urgency=medium
+
+  * live-build/ubuntu-touch/hooks/70-reconfigure-autopilot.chroot: Fix test
+    for whether a package is installed, and check for both python-autopilot
+    and python3-autopilot.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 16 May 2014 13:05:07 +0100
+
+livecd-rootfs (2.209) utopic; urgency=medium
+
+  * live-build/auto/config: Pass any additional command-line arguments on to
+    "lb config".
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 10 May 2014 13:54:42 +0100
+
+livecd-rootfs (2.208) trusty; urgency=medium
+
+  * Adding support for ubuntu-touch i386 based images
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Fri, 28 Mar 2014 19:00:25 -0300
+
+livecd-rootfs (2.207) trusty; urgency=medium
+
+  * touch/80-enable-libhybris.chroot: making libhybris the default alternatives
+    for EGL/GLESv2 on touch
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Tue, 18 Mar 2014 21:03:48 -0300
+
+livecd-rootfs (2.206) trusty; urgency=medium
+
+  * dropping maguro and adding flo, changing golfish to generic in touchsubarches
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sat, 22 Feb 2014 23:35:07 +0100
+
+livecd-rootfs (2.205) trusty; urgency=medium
+
+  * touch/48-setup-env.chroot: QML2_IMPORT_PATH should respect
+    DEB_HOST_MULTIARCH (as we now have i386 builds as well)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Tue, 18 Feb 2014 23:51:24 -0300
+
+livecd-rootfs (2.204) trusty; urgency=medium
+
+  * Make livecd-rootfs be Architecture: any so that we can go back to the
+    android-tools-fsutils dependency being architecture-specific, which
+    relieves us of having to port it to new architectures which don't care
+    about Android.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 31 Jan 2014 11:04:39 +0000
+
+livecd-rootfs (2.203) trusty; urgency=medium
+
+  * Add hostname and machine-info to the writable paths, so that hostnamectl
+    can change them to create a sane default bluetooth device name.
+
+ -- Chris Wayne <chris.wayne@canonical.com>  Mon, 20 Jan 2014 15:34:59 +0100
+
+livecd-rootfs (2.202) trusty; urgency=medium
+
+  * Add the minimal task to ubuntu-core to preserve brand consistency.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 10 Jan 2014 11:46:36 -0700
+
+livecd-rootfs (2.201) trusty; urgency=low
+
+  * add support for copying goldfish android images out of the android package
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 27 Nov 2013 12:22:07 +0100
+
+livecd-rootfs (2.200) trusty; urgency=low
+
+  * use proper quoting for egrep call in click installer
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 26 Nov 2013 16:41:56 +0100
+
+livecd-rootfs (2.199) trusty; urgency=low
+
+  * make the click package installation check for proper architecture before
+    trying to install packages from the list, so that i386 touch builds do not 
+    fall over with "wrong architecture" failures at the click install step.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 26 Nov 2013 15:14:18 +0100
+
+livecd-rootfs (2.198) trusty; urgency=low
+
+  * Double-quotes prevented the previous change from working, so drop those.
+    Additionally remove an hardcoded occurence of "saucy", instead using
+    LB_DISTRIBUTION to avoid having to change that in the future.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Sun, 20 Oct 2013 23:17:57 -0400
+
+livecd-rootfs (2.197) trusty; urgency=low
+
+  * Workaround to make ubuntu-touch build with older android package.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Sun, 20 Oct 2013 16:52:29 -0400
+
+livecd-rootfs (2.196) saucy; urgency=low
+
+  * Removing the PPAs for Ubuntu Touch builds.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Mon, 14 Oct 2013 19:20:15 -0300
+
+livecd-rootfs (2.195) saucy; urgency=low
+
+  * fix the prefixing of click packages in manifest files
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 11 Oct 2013 18:27:58 +0200
+
+livecd-rootfs (2.194) saucy; urgency=low
+
+  * prefix click packages in the manifest file with "click:"
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 11 Oct 2013 18:14:02 +0200
+
+livecd-rootfs (2.193) saucy; urgency=low
+
+  * drop SHELL=/system/bin/sh from /etc/environment on touch images (urgh)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 11 Oct 2013 17:30:21 +0200
+
+livecd-rootfs (2.192) saucy; urgency=low
+
+  * add click packages to the manifest output on ubuntu touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 11 Oct 2013 14:29:41 +0200
+
+livecd-rootfs (2.191) saucy; urgency=low
+
+  * ubuntu-touch: Make writable symlinks relative.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 30 Sep 2013 13:59:59 +0200
+
+livecd-rootfs (2.190) saucy; urgency=low
+
+  * ubuntu-touch: Add 03-etc-writable.chroot hook to move/symlink files in
+    /etc to /etc/writable/ that we need to update atomically. At the moment
+    these are timezone and localtime. (LP: #1227520)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 30 Sep 2013 13:32:32 +0200
+
+livecd-rootfs (2.189) saucy; urgency=low
+
+  * Explicitly add the ubuntu-desktop task to Edubuntu builds, so that any
+    ambiguous dependencies resolved by the contents of the ubuntu-desktop
+    task are actually resolved reliably.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 24 Sep 2013 16:58:20 +0100
+
+livecd-rootfs (2.188) saucy; urgency=low
+
+  * ship policykit rules for networkmanager, now that we use it on touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sat, 21 Sep 2013 12:54:02 +0200
+
+livecd-rootfs (2.187) saucy; urgency=low
+
+  * Removing QPA_PLATFORM_PLUGIN as it is now handled in their proper
+    packages.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Thu, 12 Sep 2013 23:25:42 +0200
+
+livecd-rootfs (2.186) saucy; urgency=low
+
+  * drop phablet-team PPA sources.list entries from ubuntu-touch, since we do
+    not use the PPA anymore
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 12 Sep 2013 20:47:11 +0200
+
+livecd-rootfs (2.185) saucy; urgency=low
+
+  * Configure LightDM, if installed, to autologin the phablet user
+
+ -- Michael Terry <mterry@ubuntu.com>  Mon, 09 Sep 2013 12:21:13 -0400
+
+livecd-rootfs (2.184) saucy; urgency=low
+
+  * Revert to always using archive-team.internal in 60-install-click.chroot
+    for now.  This is unfortunate, but "hostname --fqdn" doesn't work at
+    this stage.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 06 Sep 2013 13:21:42 +0100
+
+livecd-rootfs (2.183) saucy; urgency=low
+
+  * Make 60-install-click.chroot more verbose, in an attempt to figure out
+    why this doesn't work in the datacentre.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 06 Sep 2013 11:48:25 +0100
+
+livecd-rootfs (2.182) saucy; urgency=low
+
+  * Log the hostname at the start of the build.
+  * Fix test for whether we're running in the Canonical datacentre when
+    installing click packages.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 05 Sep 2013 16:03:15 +0100
+
+livecd-rootfs (2.181) saucy; urgency=low
+
+  * Use new multiple-database scheme in click 0.4.3 to preinstall click
+    packages.
+  * Download core click packages from the right place when building images
+    outside the Canonical datacentre.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 05 Sep 2013 11:29:17 +0100
+
+livecd-rootfs (2.180) saucy; urgency=low
+
+  * make sure the NM configuration mangling of touch images uses the sudo and
+    not the admin group, "admin" is dead since years ... (LP: #1217596)
+  * drop a few superfluous env vars on request of Ted Gould
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 28 Aug 2013 16:27:12 +0200
+
+livecd-rootfs (2.179) saucy; urgency=low
+
+  * add 70-reconfigure-autopilot.chroot to ubuntu-touch builds, to make sure
+    the phablet user actually ends up in the autopilot group
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 27 Aug 2013 11:23:56 +0200
+
+livecd-rootfs (2.178) saucy; urgency=low
+
+  * Copying click packages to install search location instead of installing
+    for a hardcoded user.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Mon, 26 Aug 2013 17:22:14 -0300
+
+livecd-rootfs (2.177) saucy; urgency=low
+
+  * do not forcefully use the admin group on touch images. this group was
+    dropped in favour of the sudo group several releases ago
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 26 Aug 2013 16:51:13 +0200
+
+livecd-rootfs (2.176) saucy; urgency=low
+
+  * preserve a symlink of media-info for backwards compatibility
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 23 Aug 2013 16:39:31 +0200
+
+livecd-rootfs (2.175) saucy; urgency=low
+
+  * move media-info file from /var/log/installer to /etc on touch images.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 23 Aug 2013 16:25:08 +0200
+
+livecd-rootfs (2.174) saucy; urgency=low
+
+  * make sure the bluetooth group has the right android GID on touch builds
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 16 Aug 2013 13:25:52 +0200
+
+livecd-rootfs (2.173) saucy; urgency=low
+
+  [Michael Terry]
+  * Add phablet user to nopasswdlogin group on Touch images
+  * Switch min uid to 1002 to prevent system users from showing in
+    the greeter on Touch images
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 14 Aug 2013 11:01:47 +0200
+
+livecd-rootfs (2.172) saucy; urgency=low
+
+  * Reenabling click package installation hook. 
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Sun, 11 Aug 2013 19:03:53 -0300
+
+livecd-rootfs (2.171) saucy; urgency=low
+
+  * seems unlike my local build the buildd doesnt get along with links, use
+    copy instead
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 07 Aug 2013 21:56:07 +0200
+
+livecd-rootfs (2.170) saucy; urgency=low
+
+  * fix package mirror in android package install routine
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 07 Aug 2013 19:17:43 +0200
+
+livecd-rootfs (2.169) saucy; urgency=low
+
+  * switch touch builds to use the packaged android img files (pending cdimage
+    changes to publish these from the livefs builder)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 07 Aug 2013 16:05:45 +0200
+
+livecd-rootfs (2.168) saucy; urgency=low
+
+  * drop unity-next PPA from ubuntu-touch builds, unity8 is in the archive now
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 01 Aug 2013 19:11:55 +0200
+
+livecd-rootfs (2.167) saucy; urgency=low
+
+  * make sure FLASH_KERNEL_SKIP is set when we post-process touch images
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 31 Jul 2013 13:33:53 +0200
+
+livecd-rootfs (2.166) saucy; urgency=low
+
+  * add radio user (with UID 1001 (required by android)) to the default user
+    creation for ubuntu-touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 25 Jul 2013 11:14:34 +0200
+
+livecd-rootfs (2.165) saucy; urgency=low
+
+  * Remove e2fs-zero.py and references to it, it's no longer used.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 24 Jul 2013 11:42:23 +0100
+
+livecd-rootfs (2.164) saucy; urgency=low
+
+  * Run builds under eatmydata.  (This doesn't actually seem to help very
+    much - it shaves a minute off a 48-minute test build on my laptop - but
+    it will stop people being distracted by it.)
+  * Remove livecd.py, which was never finished.
+  * Remove all vestiges of livecd.sh and ubuntu-touch-android.sh.
+    Requiescant in pace.
+  * Temporarily disable Click package installation, until desktop/AppArmor
+    integration has landed properly.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 23 Jul 2013 23:21:56 +0100
+
+livecd-rootfs (2.163) saucy; urgency=low
+
+  * point click package install to http://archive-team.internal/click_packages
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 18 Jul 2013 16:31:54 +0200
+
+livecd-rootfs (2.162) saucy; urgency=low
+
+  * Ubuntu Touch click package install hook.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Wed, 17 Jul 2013 00:05:49 -0300
+
+livecd-rootfs (2.161) saucy; urgency=low
+
+  * drop bashrc mangling from ubuntu-touch builds \o/
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 17 Jul 2013 16:30:12 +0200
+
+livecd-rootfs (2.160) saucy; urgency=low
+
+  * Do the same trick as in 2.158 for kubuntu armhf+omap4 too.
+
+ -- Iain Lane <iain.lane@canonical.com>  Wed, 17 Jul 2013 11:52:23 +0100
+
+livecd-rootfs (2.159) saucy; urgency=low
+
+  * make touch images source the dbus session address from
+    ~/.cache/upstart/dbus-session instead of ~/.dbus-session
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 16 Jul 2013 20:12:31 +0200
+
+livecd-rootfs (2.158) saucy; urgency=low
+
+  * Under armhf+omap4, don't use the ubuntu-desktop Task, but use the
+    metapackage instead. The metapackage doesn't pull in the X stack which
+    allows us to additionally install the special "revert" X stack that we
+    require here.
+
+ -- Iain Lane <iain.lane@canonical.com>  Tue, 16 Jul 2013 17:19:22 +0100
+
+livecd-rootfs (2.157) saucy; urgency=low
+
+  * add xserver-xorg-input-evdev-omap-revert and
+    xserver-xorg-video-omap-revert to panda builds
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 12 Jul 2013 11:03:34 +0200
+
+livecd-rootfs (2.156) saucy; urgency=low
+
+  * fix build stamp handling for ubuntu-touch (requires an RT to have IS
+    update BuildLiveCD on the builders)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 11 Jul 2013 16:34:34 +0200
+
+livecd-rootfs (2.155) saucy; urgency=low
+
+  * try to hand the exported $NOW over from live-build/auto/config as
+    $BUILDSTAMP so live-build/auto/build can use it to write a stamp file
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 05 Jul 2013 12:29:50 +0200
+
+livecd-rootfs (2.154) saucy; urgency=low
+
+  [ Sergio Schvezov ]
+  * Adding ppa:ubuntu-unity/next for Touch to obtain unity8 and Mir.
+  * Switching to using the maliit plugin provided by maliit-framework.
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Thu, 04 Jul 2013 13:44:08 -0300
+
+livecd-rootfs (2.153) saucy; urgency=low
+
+  * we do better not try to create something outside of a chroot while we are
+    in it :P (make sure bootimg's are created in /boot of the chroot and only
+    copied afterwards).
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sat, 29 Jun 2013 16:59:28 +0200
+
+livecd-rootfs (2.152) saucy; urgency=low
+
+  * live-build/auto/build: Fix syntax error.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 28 Jun 2013 17:13:54 +0100
+
+livecd-rootfs (2.151) saucy; urgency=low
+
+  * use ubuntu-touch-generic-initrd for touch images instead of rolling an
+    arch specific initrd at build time for each arch (this should save quite
+    some build time)
+  * directly create the output file with abootimg, no need to cp it separately
+  * do not remove kernel packages from a chroot we throw away anyway
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 28 Jun 2013 15:06:59 +0200
+
+livecd-rootfs (2.150) saucy; urgency=low
+
+  * export $NOW in BuildLiveCD so we have it available in live-build
+  * create a build stamp in /var/log/installer/media-info on Ubuntu Touch images
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 26 Jun 2013 11:32:31 +0200
+
+livecd-rootfs (2.149) saucy; urgency=low
+
+  * set QT_SELECT=qt5 in touch image environment
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 14 Jun 2013 16:11:33 +0200
+
+livecd-rootfs (2.148) saucy; urgency=low
+
+  [ Colin Watson ]
+  * live-build/ubuntu-touch/hooks/02-add_user_to_groups.chroot: Delete
+    redundant code to create global static groups, which are already created
+    more correctly by base-passwd on every Ubuntu system.
+  * live-build/ubuntu-touch/hooks/02-add_user_to_groups.chroot: Fix
+    detection of existing groups not to misfire if there is an existing
+    group with the desired group name as a prefix.
+
+  [ Oliver Grawert ]
+  * drop daily-build-next PPA, according to didrocks everything from there
+    should be in the saucy archive now, yay.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 10 Jun 2013 12:33:32 +0200
+
+livecd-rootfs (2.147) saucy; urgency=low
+
+  * sync ubuntu-touch customzation scripts with phablet build tree 
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 03 Jun 2013 09:56:15 +0200
+
+livecd-rootfs (2.146) saucy; urgency=low
+
+  * drop the generic .bootimg from ubuntu-touch, all boot images we need have
+    to be subarch tagged
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 30 May 2013 18:21:06 +0200
+
+livecd-rootfs (2.145) saucy; urgency=low
+
+  * adjust naming of the bootimg files so cdimage picks them up for publishing
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 30 May 2013 12:14:38 +0200
+
+livecd-rootfs (2.144) saucy; urgency=low
+
+  * Clean up subarch loop for touch subarches to skip unwanted deps.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 29 May 2013 16:41:24 -0600
+
+livecd-rootfs (2.143) saucy; urgency=low
+
+  * drop all the cleanup code, we already have the tarball and don't need to
+    clean the chroot.
+  * add better quoting for update-initramfs and abootimg calls for
+    ubuntu-touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 29 May 2013 21:47:03 +0200
+
+livecd-rootfs (2.142) saucy; urgency=low
+
+  * copy the initrd out of the chroot before we purge the kernel package on
+    ubuntu-touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 29 May 2013 16:53:56 +0200
+
+livecd-rootfs (2.141) saucy; urgency=low
+
+  * make removal of non existing old initrds non fatal in ubuntu-touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 29 May 2013 16:25:18 +0200
+
+livecd-rootfs (2.140) saucy; urgency=low
+
+  *  hardcode dist in the temporary sources.list of the ubuntu-touch initrd
+     creation for a test
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 29 May 2013 14:20:34 +0200
+
+livecd-rootfs (2.139) saucy; urgency=low
+
+  * fix resolv.conf for ubuntu-touch initramfs creation
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 29 May 2013 12:10:53 +0200
+
+livecd-rootfs (2.138) saucy; urgency=low
+
+  * also move the sources.list.d dir out of the way on ubuntu-touch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 28 May 2013 15:17:46 +0200
+
+livecd-rootfs (2.137) saucy; urgency=low
+
+  * clear up /var/lib/initramfs-tools/ in the chroot after building initrds
+  * remove ubuntu-touch/hooks/49-setup-demo-assets.chroot
+  * handle sources.list in ubuntu-touch initrd creation
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 28 May 2013 11:13:57 +0200
+
+livecd-rootfs (2.136) saucy; urgency=low
+
+  * ubuntu-touch: determine the value for $kver inside the chroot, not
+    outside. Use -c and drop -t with update-initramfs
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 27 May 2013 18:13:05 +0200
+
+livecd-rootfs (2.135) saucy; urgency=low
+
+  [ Colin Watson ]
+  * BuildLiveCD: Time out lockfile after 12 hours, which should be enough
+    for even the longest build queue to clear.
+
+  [ Oliver Grawert ]
+  * add live-build script for subarch specific Ubuntu Touch initrd
+    and boot image creation
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 27 May 2013 14:34:17 +0200
+
+livecd-rootfs (2.134) saucy; urgency=low
+
+  * remove qt5-proper PPA from ubuntu touch builds
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 17 May 2013 14:33:35 +0200
+
+livecd-rootfs (2.133) saucy; urgency=low
+
+  * drop online-accounts-qt5-staging PPA from ubuntu-touch images
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 07 May 2013 21:00:42 +0200
+
+livecd-rootfs (2.132) saucy; urgency=low
+
+  * also remove ubuntu-touch-android.sh from debian/install
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 07 May 2013 15:11:53 +0200
+
+livecd-rootfs (2.131) saucy; urgency=low
+
+  * drop hardcoded packagelists for ubuntu-touch, this is dealt with by
+    the ubuntu-touch seed/task/metapackage
+  * drop android build script, we will instead use a package
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 07 May 2013 14:19:03 +0200
+
+livecd-rootfs (2.130) saucy; urgency=low
+
+  * make sure we build a plain filesystem for ubuntu-touch (this should
+    automatically produce a preinstalled tarball)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 06 May 2013 12:48:17 +0200
+
+livecd-rootfs (2.129) saucy; urgency=low
+
+  * Disable zsync for ubuntu-touch images.
+  * Copy binary-tar.tar.gz to $PREFIX.rootfs.tar.gz if it exists.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 03 May 2013 11:46:58 -0700
+
+livecd-rootfs (2.128) saucy; urgency=low
+
+  * Don't include lupin-casper in ubuntu-touch images.
+  * Use gzip compression for ubuntu-touch tarballs.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 03 May 2013 08:51:24 -0700
+
+livecd-rootfs (2.127) saucy; urgency=low
+
+  * Install metapackages rather than tasks for ubuntu-touch, since it still
+    relies on PPAs and those don't have tasks.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 02 May 2013 13:50:34 -0700
+
+livecd-rootfs (2.126) saucy; urgency=low
+
+  * drop the super-friends (sorry batman and robin ...) and ubuntu-sdk PPAs
+  from live-build config for ubuntu-touch, their packages should be in the
+  saucy archive already
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 02 May 2013 20:23:13 +0200
+
+livecd-rootfs (2.125) saucy; urgency=low
+
+  * live-build/auto/config: Add basic ubuntu-touch enablement (based on
+    patch from Oliver Grawert, for which thanks).
+  * live-build/auto/config, live-build/ubuntu-touch: Copy a huge pile of
+    customisation by Ricardo Salveti from
+    lp:~phablet-team/touch-preview-images/ubuntu-build-phablet, which should
+    be close to enough for the architecture-independent parts of
+    ubuntu-touch builds.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 01 May 2013 12:05:41 -0700
+
+livecd-rootfs (2.124) raring; urgency=low
+
+  * drop the namespace in mount options of ubuntu-touch-android.sh,
+    mount does not like that
+  * actually give chroot a rootdir when calling it
+  * make sure /dev/pts exists in the chroot before mounting something on it
+  * make umount lazy
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 16 Apr 2013 13:53:53 +0200
+
+livecd-rootfs (2.123) raring; urgency=low
+
+  * fix typos in debootstrap line of ubuntu-touch-android.sh
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 16 Apr 2013 11:07:44 +0200
+
+livecd-rootfs (2.122) raring; urgency=low
+
+  * redo ubuntu-touch-android.sh to use its own build chroot since we can not
+    add universe support to the livefs builder chroot
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 15 Apr 2013 20:18:32 +0200
+
+livecd-rootfs (2.121) raring; urgency=low
+
+  * ubuntu-touch-android.sh: enable universe in the build chroot
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 15 Apr 2013 18:40:55 +0200
+
+livecd-rootfs (2.120) raring; urgency=low
+
+  * fix typo in shebang of ubuntu-touch-android.sh
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 15 Apr 2013 16:07:08 +0200
+
+livecd-rootfs (2.119) raring; urgency=low
+
+  [ Colin Watson ]
+  * BuildLiveCD: Link livecd-${NOW}-${ARCH}.out to livecd-${ARCH}.out, to
+    make it easier for cdimage to fetch the latest build log for failure
+    notification mails.
+
+  [ Oliver Grawert ]
+  * the android build system is sadly full of bashisms (even though it has
+    generic .sh suffixes and no shebang line) until this is fixed use a
+    /bin/bash shebang
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 11 Apr 2013 11:28:08 +0200
+
+livecd-rootfs (2.118) raring; urgency=low
+
+  * normalize the naming scheme for ubuntu-touch-android.sh output
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 28 Mar 2013 19:34:18 +0100
+
+livecd-rootfs (2.117) raring; urgency=low
+
+  * make ubuntu-touch-android.sh also create $subarch-system.img
+  $subarch-recovery.img and $subarch-boot.img
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 28 Mar 2013 18:47:06 +0100
+
+livecd-rootfs (2.116) raring; urgency=low
+
+  * add new arg (-t) to enable Ubuntu Touch android cross builds which calls a
+    newly added script (ubuntu-touch-android.sh) to cross build android base
+    images for Ubuntu Touch on an amd64 builder.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 28 Mar 2013 16:02:12 +0100
+
+livecd-rootfs (2.115) raring; urgency=low
+
+  * live-build/auto/config: Run the ubuntukylin-default-settings chroot
+    hook.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 27 Mar 2013 14:47:51 +0000
+
+livecd-rootfs (2.114) raring; urgency=low
+
+  * Revert changes in 2.113.  This needs to be done in cdimage/debian-cd
+    instead.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 14 Mar 2013 16:54:48 +0000
+
+livecd-rootfs (2.113) raring; urgency=low
+
+  * live-build/auto/config: Set gfxboot default language to zh_CN for
+    UbuntuKylin.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 14 Mar 2013 11:53:38 +0000
+
+livecd-rootfs (2.112) raring; urgency=low
+
+  * live-build/auto/config: Add ubuntu-gnome project (LP: #1152818)
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 13 Mar 2013 10:28:23 +0000
+
+livecd-rootfs (2.111) raring; urgency=low
+
+  * live-build/auto/config: Add ubuntukylin as a valid project
+    (LP: #1152812).
+  * BuildLiveCD: Remove the explicit list of valid projects.  This is a
+    hassle to modify, and not very useful since an invalid project will fail
+    soon enough anyway.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 09 Mar 2013 12:13:24 +0000
+
+livecd-rootfs (2.110) raring; urgency=low
+
+  * live-build/auto/config: Drop ubuntustudio-audio-plugins task.
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 07 Mar 2013 13:27:13 +0000
+
+livecd-rootfs (2.109) raring; urgency=low
+
+  * Drop ubuntustudio-generation and ubuntustudio-recording tasks and add
+    ubuntustudio-audio task to reflect Ubuntu Studio seed restructuring
+    - update live-build/auto/config
+
+ -- Micah Gersten <micahg@ubuntu.com>  Tue, 05 Mar 2013 23:14:25 -0600
+
+livecd-rootfs (2.108) raring; urgency=low
+
+  [ Colin Watson ]
+  * live-build/auto/build: Use slightly safer code for kernel handling just
+    in case 'set -o pipefail' is ever reinstated here.
+
+  [ Adam Conrad ]
+  * Add abootimg explicitly to ac100 and nexus7 images, so it's marked
+    as manually installed and apt doesn't autoremove it (LP: #1041290)
+  * Remove linux-firmware-nexus7 from the install list, it gets pulled
+    in automatically by linux-image-nexus7, so this is redundant.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 29 Jan 2013 12:34:37 -0700
+
+livecd-rootfs (2.107) raring; urgency=low
+
+  * Make sure the $PREFIX.kernel-$FLAVOUR.efi.signed output is
+    world-readable.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 04 Dec 2012 16:20:22 +0000
+
+livecd-rootfs (2.106) raring; urgency=low
+
+  * re-enable all slideshows on all preinstalled images, webkit should work
+    again
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 03 Dec 2012 14:37:01 +0100
+
+livecd-rootfs (2.105) raring; urgency=low
+
+  * preseed autologin in the nexus7 tarball
+  * use ubuntu-defaults-nexus7 package in the nexus7 images
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 23 Nov 2012 12:20:30 +0100
+
+livecd-rootfs (2.104) raring; urgency=low
+
+  * use a subarch based approach for the ac100 and nexus7 bootimg.cfg files
+  * create a media-info file and place it inside the tarball installer
+    initramfs for copying it to the target system on successfull decompression
+    (LP: #1080747)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 22 Nov 2012 01:23:29 +0100
+
+livecd-rootfs (2.103) raring; urgency=low
+
+  * live-build/auto/build: Exclude all *.efi* files from kernel version
+    detection (i.e. including *.efi.signature), not just *.efi.signed.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 21 Nov 2012 22:31:46 +0000
+
+livecd-rootfs (2.102) raring; urgency=low
+
+  * create the nexus7 rootfs image with .ext4 as suffix instead of using
+    .img, so debian-cd knows how to handle it
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 20 Nov 2012 16:45:06 +0100
+
+livecd-rootfs (2.101) raring; urgency=low
+
+  * instead of mangling the ac100 bootimg for nexus7 support, ship a proper
+    config in ac100-tarball-installer and build the nexus7 one from scratch
+    as well.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 20 Nov 2012 12:37:33 +0100
+
+livecd-rootfs (2.100) raring; urgency=low
+
+  * clean up the userdata dir
+  * move the tarball around instead of copying it
+  * fix quoting of abootimg call harder
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 19 Nov 2012 19:48:42 +0100
+
+livecd-rootfs (2.99) raring; urgency=low
+
+  * fix quoting in abootimg call for nexus7
+  * dont fail if the userdata dir already exists
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 19 Nov 2012 18:04:13 +0100
+
+livecd-rootfs (2.98) raring; urgency=low
+
+  * we want nvidia-tegra3 (the binary) not nvidia-graphics-drivers-tegra3
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 19 Nov 2012 14:55:19 +0100
+
+livecd-rootfs (2.97) raring; urgency=low
+
+  * add linux-firmware-nexus7 and nvidia-graphics-drivers-tegra3 to nexus7
+    builds
+  * preseed the license popup of linux-firmware-nexus7, we will show
+    it in the installer for full image installs.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 19 Nov 2012 12:58:36 +0100
+
+livecd-rootfs (2.96) raring; urgency=low
+
+  * add nexus7 specific kernel cmdline
+  * move the nexus7 processing up a bit in the code so we can modify the
+    bootimg cmdline before the file gets copied around
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 14 Nov 2012 13:28:50 +0100
+
+livecd-rootfs (2.95) raring; urgency=low
+
+  * make the dependency on android-tools-fsutils not arch specific, seems
+    dpkg doesnt like arch specific binary deps in arch all packages
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 09 Nov 2012 13:30:15 +0100
+
+livecd-rootfs (2.94) raring; urgency=low
+
+  * add a dependency on android-tools-fsutils for armhf builds
+  * add nexus7 live-build configuration
+  * add nexus7 post processing with make_ext4fs for teh tarball to roll a
+    proper android img file
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 09 Nov 2012 13:00:36 +0100
+
+livecd-rootfs (2.93) quantal; urgency=low
+
+  * Revert binary/$INITFS/kernel-$FLAVOUR to the unsigned kernel, and link
+    signed kernels to binary/$INITFS/kernel-$FLAVOUR.efi.signed instead
+    (LP: #1067659).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 17 Oct 2012 11:48:47 +0100
+
+livecd-rootfs (2.92) quantal; urgency=low
+
+  * disable all slideshows on al preinstalled images, due to (LP: #1066046)
+    the installer crashes when trying to start up webkit for teh slideshow
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sat, 13 Oct 2012 11:44:52 +0200
+
+livecd-rootfs (2.91) quantal; urgency=low
+
+  * make sure preinstalled ac100 images have multiverse enabled in their
+    sources.list
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 12 Oct 2012 14:18:53 +0200
+
+livecd-rootfs (2.90) quantal; urgency=low
+
+  * live-build/auto/build: If they exist, link *.efi.signed versions of the
+    kernel to binary/$INITFS/kernel-$FLAVOUR rather than the unsigned
+    versions.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 11 Oct 2012 02:22:34 +0100
+
+livecd-rootfs (2.89) quantal; urgency=low
+
+  * fix lubuntu and xubuntu preinstalled handling so we end up with the
+    right slideshows in oem-config
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 02 Oct 2012 23:56:33 +0200
+
+livecd-rootfs (2.88) quantal; urgency=low
+
+  * live-build/auto/config: Add photography and publishing metas for
+    Ubuntu Studio (LP: #1057816)
+
+ -- Micah Gersten <micahg@ubuntu.com>  Thu, 27 Sep 2012 23:19:19 -0500
+
+livecd-rootfs (2.87) quantal; urgency=low
+
+  * live-build/auto/config: Build ubuntu-server and ubuntu-core with
+    --initramfs=none, since we don't need casper in those images.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 12 Sep 2012 14:01:56 +0100
+
+livecd-rootfs (2.86) quantal; urgency=low
+
+  * Reorganise code to avoid kernel installation on
+    ubuntu-server/ubuntu-core so that it works for all architectures.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 11 Sep 2012 16:56:43 +0100
+
+livecd-rootfs (2.85) quantal; urgency=low
+
+  * live-build/auto/config: Set KERNEL_FLAVOURS=none for ubuntu-server as
+    well, so that live-build/auto/build doesn't try to copy out kernel
+    images.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 10 Sep 2012 09:34:56 +0100
+
+livecd-rootfs (2.84) quantal; urgency=low
+
+  * Actually apply the change done in 2.74 as it was only done to the
+    legacy code...
+    - Change mksquashfs compression flags for LTSP images, turning
+      compression back on to match current ltsp-update-image behaviour.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Sun, 09 Sep 2012 15:49:07 -0400
+
+livecd-rootfs (2.83) quantal; urgency=low
+
+  * live-build/auto/config: Remove standard and server tasks from
+    ubuntu-server squashfs, and build it with no kernel packages so that
+    they can be added more correctly later by the installer (LP: #1028453).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sun, 09 Sep 2012 20:41:19 +0100
+
+livecd-rootfs (2.82) quantal; urgency=low
+
+  * live-build/auto/build: live-build now calls hybrid ISO9660 images
+    binary.hybrid.iso rather than binary-hybrid.iso.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 03 Sep 2012 18:41:24 +0100
+
+livecd-rootfs (2.81) quantal; urgency=low
+
+  * live-build/auto/config: Disable zsync for BINARYFORMAT=iso*|usb* builds.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 30 Aug 2012 23:44:33 +0100
+
+livecd-rootfs (2.80) quantal; urgency=low
+
+  * add pvr-omap4 driver to omap4 image builds for everything but
+    ubuntu-server, ubuntu-core and base images so we have GLES working
+    out of the box on them
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 29 Aug 2012 12:53:11 +0200
+
+livecd-rootfs (2.79) quantal; urgency=low
+
+  * setting --architectures seems to have weird side effects on arm
+    (considering all but the buildd arch as foreign etc), disable it for a
+    testbuild...
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 27 Aug 2012 16:04:30 +0200
+
+livecd-rootfs (2.78) quantal; urgency=low
+
+  * revert the last change, i was not aware that unity-2d was also ripped out
+    of the archive and not only removed from the seeds
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 23 Aug 2012 19:02:35 +0200
+
+livecd-rootfs (2.77) quantal; urgency=low
+
+  * add unity-2d to the list of extra packages on ac100
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 23 Aug 2012 17:55:37 +0200
+
+livecd-rootfs (2.76) quantal; urgency=low
+
+  * live-build/auto/config:
+    - Don't try to install an empty task name when building an image without
+      a live task.
+    - Fix installation of ubuntu-server fstab removal hook.
+    - Pass --architectures to 'lb config', to make it easier to build images
+      for a different architecture.
+    - Attempt to restrict task installation to the native architecture.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 23 Aug 2012 11:09:10 +0100
+
+livecd-rootfs (2.75) quantal; urgency=low
+
+  * Adjust for live-build interface changes up to 3.0~a57-1ubuntu1.
+  * Break ubuntu-defaults-builder (<< 0.32) to account for these interface
+    changes.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 22 Aug 2012 13:29:29 +0100
+
+livecd-rootfs (2.74) quantal; urgency=low
+
+  * Change mksquashfs compression flags for LTSP images, turning
+    compression back on to match current ltsp-update-image behaviour.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Mon, 20 Aug 2012 19:37:01 -0400
+
+livecd-rootfs (2.73) quantal; urgency=low
+
+  * Add u-boot-tools to the installed set for all u-boot ARM images
+  * Remove ti-omap4-ppa from the omap4 images; it's no longer used
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 25 Jul 2012 06:37:02 -0600
+
+livecd-rootfs (2.72) quantal; urgency=low
+
+  * Install a hook to remove /etc/fstab rather than building ubuntu-server
+    with --debian-installer=live; the latter has unwanted side-effects.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 23 Jul 2012 21:34:28 +0100
+
+livecd-rootfs (2.71) quantal; urgency=low
+
+  * live-build/auto/config: Don't purge .pyc files on ubuntu-server images.
+  * live-build/auto/config: Build ubuntu-server with
+    --debian-installer=live.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 23 Jul 2012 17:57:59 +0100
+
+livecd-rootfs (2.70) quantal; urgency=low
+
+  * live-build/auto/config: Don't install lupin-casper on ubuntu-server
+    images.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sun, 22 Jul 2012 23:45:21 +0100
+
+livecd-rootfs (2.69) quantal; urgency=low
+
+  * live-build/auto/config: Add server task to ubuntu-server images.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 06 Jul 2012 12:39:46 +0100
+
+livecd-rootfs (2.68) quantal; urgency=low
+
+  * live-build/auto/config: Emit sources.list entries for -proposed if the
+    environment variable PROPOSED is set (LP: #1019514).
+  * BuildLiveCD: If the -p option was used, pass PROPOSED=1 to 'lb config'.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 30 Jun 2012 07:13:50 +0100
+
+livecd-rootfs (2.67) quantal; urgency=low
+
+  * Switch i386 ubuntustudio to linux-lowlatency flavor (LP: #1018075)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 26 Jun 2012 14:00:39 -0600
+
+livecd-rootfs (2.66) quantal; urgency=low
+
+  [ Jonathan Riddell ]
+  * Build Kubuntu from universe.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 11 Jun 2012 12:49:57 +0100
+
+livecd-rootfs (2.65) precise; urgency=low
+
+  * Add (extra-)override parsing to the preinstalled pool to make sure
+    we get task headers in the local pool for tasksel (LP: #819899)
+  * Move temp directories under config so they get cleaned properly
+  * Invoke apt-get update once with only the sources.list fragment
+    for the local archive, so our package/task selection more closely
+    mimics the CD experience (LP: #985258, #985737, #985280, #819900)
+  * Write out a standard sources.list entry for preinstalled systems
+    that's similar to the one generated by installers (LP: #985291)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 20 Apr 2012 00:29:38 -0600
+
+livecd-rootfs (2.64) precise; urgency=low
+
+  * Add minimal and standard tasks to Ubuntu Studio images (LP: #962585).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 23 Mar 2012 14:21:12 +0000
+
+livecd-rootfs (2.63) precise; urgency=low
+
+  * Add the ubiquity slideshow back to PREINSTALLED images (LP: #960688)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Thu, 22 Mar 2012 12:46:18 -0600
+
+livecd-rootfs (2.62) precise; urgency=low
+
+  * On Lubuntu and Xubuntu, only use the generic kernel on amd64 and i386.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 20 Mar 2012 17:53:04 +0000
+
+livecd-rootfs (2.61) precise; urgency=low
+
+  [ Colin Watson ]
+  * Use lowlatency for Ubuntu Studio amd64, since lowlatency-pae is
+    i386-specific (LP: #959011).
+
+  [ Julien Lavergne ]
+  * Use generic (non-PAE) kernel for Lubuntu (LP: #958866).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 19 Mar 2012 12:53:13 +0000
+
+livecd-rootfs (2.60) precise; urgency=low
+
+  * Use generic (non-PAE) kernel for Xubuntu (LP: #955009).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 15 Mar 2012 18:54:45 +0000
+
+livecd-rootfs (2.59) precise; urgency=low
+
+  * Switch Ubuntu Studio to lowlatency-pae kernel rather than lowlatency
+    (LP: #956250).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 15 Mar 2012 18:35:14 +0000
+
+livecd-rootfs (2.58) precise; urgency=low
+
+  * Use lowlatency kernel for Ubuntu Studio (LP: #956250).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 15 Mar 2012 18:08:44 +0000
+
+livecd-rootfs (2.57) precise; urgency=low
+
+  * Move ac100-tarball-installer from install set to live set
+    to make sure it's not pulling in other bits in the install
+    pass (and because installers belong in the live set anyway)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 29 Feb 2012 09:23:48 -0700
+
+livecd-rootfs (2.56) precise; urgency=low
+
+  [ Ante Karamatić ]
+  * Add cloud-live project to livecd.sh and BuildLiveCD.
+
+  [ Jonathan Riddell ]
+  * Replace kubuntu-mobile with kubuntu-active
+  * Remove kubuntu-netbook, now just part of kubuntu-desktop
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 22 Feb 2012 11:58:20 +0000
+
+livecd-rootfs (2.55) precise; urgency=low
+
+  * Build Lubuntu with --no-install-recommends, to match its seed structure
+    (LP: #918401).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 02 Feb 2012 14:15:07 +0000
+
+livecd-rootfs (2.54) precise; urgency=low
+
+  * Remove the x-loader packages from omap and omap4 flavours, as they
+    are now using the MLO provided by their respective u-boot packages.
+  * Add zram-config to the ac100 subarch to replace the installer hack.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 25 Jan 2012 22:34:59 -0700
+
+livecd-rootfs (2.53) precise; urgency=low
+
+  * live-build/auto/config: Fix ubuntustudio-dvd task selection.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 23 Jan 2012 19:46:07 +0000
+
+livecd-rootfs (2.52) precise; urgency=low
+
+  * live-build/auto/config: Fix support for ubuntustudio-dvd project.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 23 Jan 2012 17:17:04 +0000
+
+livecd-rootfs (2.51) precise; urgency=low
+
+  * BuildLiveCD: Accept ubuntustudio-dvd as a valid project.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 20 Jan 2012 23:23:48 +0000
+
+livecd-rootfs (2.50) precise; urgency=low
+
+  * Add Ubuntu Studio support.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 20 Jan 2012 20:51:04 +0000
+
+livecd-rootfs (2.49) precise; urgency=low
+
+  [ Adam Conrad ]
+  * Update maintainer to Ubuntu Developers, LaMont doesn't upload much.
+
+  [ Colin Watson ]
+  * Get live-build to divert update-initramfs while building the chroot.
+    This should cut a few minutes off builds, particularly on slow
+    architectures.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 16 Jan 2012 12:53:23 +0000
+
+livecd-rootfs (2.48) precise; urgency=low
+
+  * Fix sense of live/preinstalled change in 2.46; add the live task for
+    non-preinstalled images, rather than only for preinstalled images.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 10 Jan 2012 12:41:36 +0000
+
+livecd-rootfs (2.47) precise; urgency=low
+
+  * put ti-omap4-ppa into omap4 images 
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 10 Jan 2012 12:46:20 +0100
+
+livecd-rootfs (2.46) precise; urgency=low
+
+  * Guard legacy cloop code in a [ -f ], so it stops failing.
+  * Don't add the LIVE_TASK for any PREINSTALLED images.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Mon, 09 Jan 2012 03:23:26 -0700
+
+livecd-rootfs (2.45) precise; urgency=low
+
+  * Change default suite to precise (better late than never?)
+  * Add the -A option to the getopts argument list, so it works.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Mon, 05 Dec 2011 07:50:14 -0700
+
+livecd-rootfs (2.44) precise; urgency=low
+
+  * Mirror armel support as armhf, so we can build all the same images.
+  * Allow ARCH to be specified on the BuildLiveCD command line as -A,
+    so that it doesn't have to be hardcoded for non-native builders.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 02 Dec 2011 11:41:13 -0700
+
+livecd-rootfs (2.43) oneiric; urgency=low
+
+  * BuildLiveCD: Stop building ubuntu-defaults-image images with universe.
+    ubuntu-defaults-zh-cn is in main now, and it causes images to overflow
+    due to the extra /var/lib/apt/lists indexes.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Fri, 07 Oct 2011 18:29:59 +0200
+
+livecd-rootfs (2.42) oneiric; urgency=low
+
+  * Explicitly select ubuquity frontend as well, to match the
+    oem-config frontend, and avoid pulling in unwanted deps.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Thu, 06 Oct 2011 19:30:51 -0600
+
+livecd-rootfs (2.41) oneiric; urgency=low
+
+  * Re-enable swap on jasper-using images, a regression from
+    the switch from livecd-rootfs to live-build (LP: #868662)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 05 Oct 2011 13:20:24 -0600
+
+livecd-rootfs (2.40) oneiric; urgency=low
+
+  * Revert the previous change and apply it for all $PREINSTALLED
+    targets instead of just ext2|ext3|ext4, so ac100 gets the fix.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 28 Sep 2011 15:20:38 -0600
+
+livecd-rootfs (2.39) oneiric; urgency=low
+
+  * Explicitly select the oem-config frontend to install on a
+    per-project basis, to match the ubiquity in use (LP: #820514)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Mon, 26 Sep 2011 19:14:56 -0600
+
+livecd-rootfs (2.38) oneiric; urgency=low
+
+  * Add main, restricted, universe, and multiverse to the sources.list
+    for Wubi disk images (LP: #855301).
+
+ -- Evan Dandrea <ev@ubuntu.com>  Thu, 22 Sep 2011 10:31:11 +0100
+
+livecd-rootfs (2.37) oneiric; urgency=low
+
+  * BuildLiveCD: Fix typo that broke installing ubuntu-defaults-builder and
+    its recommendations.
+  * Squash errors from 'ls vmlinu?-*'.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 14 Sep 2011 12:15:02 +0100
+
+livecd-rootfs (2.36) oneiric; urgency=low
+
+  [ Colin Watson ]
+  * BuildLiveCD: Add subproject and ubuntu-defaults-image locale to error
+    mail subject.
+  * BuildLiveCD: Install recommendations of ubuntu-defaults-builder.
+
+  [ Oliver Grawert ]
+  * also store the size of the ac100 tarball in the initrd, since the tarball 
+    changes its name several times during build we need a second criteria to not
+    loop over all availiable tarballs with md5sum at install time.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 06 Sep 2011 15:25:52 +0200
+
+livecd-rootfs (2.35) oneiric; urgency=low
+
+  * Set KERNEL_FLAVOURS for mx5.
+
+ -- Jani Monoses <jani@ubuntu.com>  Wed, 24 Aug 2011 18:18:42 +0300
+
+livecd-rootfs (2.34) oneiric; urgency=low
+
+  * drop FLASH_KERNEL_SKIP from live-build config, flash-kernel suppression is 
+    handled through a diversion already.
+  * add FLASH_KERNEL_SKIP explicitly to the post build ac100 update-initramfs 
+    chroot call.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 24 Aug 2011 14:16:55 +0200
+
+livecd-rootfs (2.33) oneiric; urgency=low
+
+  * BuildLiveCD: Add the subproject (if any) and the ubuntu-defaults-image
+    locale (if any) to the output directory name.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 24 Aug 2011 12:25:52 +0100
+
+livecd-rootfs (2.32) oneiric; urgency=low
+
+  * Fix kernel package name for mx5.
+
+ -- Jani Monoses <jani@ubuntu.com>  Wed, 24 Aug 2011 14:14:10 +0300
+
+livecd-rootfs (2.31) oneiric; urgency=low
+
+  * Link binary.iso or binary-hybrid.iso, if found, into the output
+    directory for use by BuildLiveCD.
+  * Tolerate ubuntu-defaults-image's kernel renaming.
+  * Add a -u option to BuildLiveCD which calls ubuntu-defaults-image.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 23 Aug 2011 18:35:56 +0100
+
+livecd-rootfs (2.30) oneiric; urgency=low
+
+  * provide .bootimg as a link to .bootimg-$FLAVOUR similar to the 
+    naming scheme we use for initrd and kernel files.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sat, 20 Aug 2011 10:58:30 +0200
+
+livecd-rootfs (2.29) oneiric; urgency=low
+
+  *  rename ac100 bootimage to something the build system can parse easier.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 19 Aug 2011 14:29:10 +0200
+
+livecd-rootfs (2.28) oneiric; urgency=low
+
+  * Switch ubuntu-dvd to ubuntu-usb and ubuntu-usb-live tasks.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 19 Aug 2011 10:56:49 +0100
+
+livecd-rootfs (2.27) oneiric; urgency=low
+
+  * fix typo in abootimg call
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 18 Aug 2011 18:04:44 +0200
+
+livecd-rootfs (2.26) oneiric; urgency=low
+
+  * make sure flash-kernel is not executed during build, this setting wasn't
+    transitioned from livecd.sh yet
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 18 Aug 2011 11:55:54 +0200
+
+livecd-rootfs (2.25) oneiric; urgency=low
+
+  * include the md5 sum of the rootfs tarball in the initrd, so the installer
+    can check against it for ac100 installs
+  * post process the kernel and initrd for ac100 though abootimg to get a
+    proper android boot image
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 17 Aug 2011 17:55:08 +0200
+
+livecd-rootfs (2.24) oneiric; urgency=low
+
+  * add missing ;; to the mx5 case statement
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 16 Aug 2011 15:40:51 +0200
+
+livecd-rootfs (2.23) oneiric; urgency=low
+
+  [ Jani Monoses ]
+  * Add mx5 subarch support for Freescale i.MX53
+
+  [ Oliver Grawert ]
+  * adjust the packagelist for ac100 a bit, according to adam it should not
+    need the kernel metapackage seeded if it matches the naming convention
+  * do not install preinstall-pool on ac100-server, it breaks for no apparent
+    reason atm, this makes server rootfses for ac100 buildable again.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 16 Aug 2011 14:50:33 +0200
+
+livecd-rootfs (2.22) oneiric; urgency=low
+
+  [ Adam Conrad ]
+  * Switch a hardcoded "boot" to "$INITFS" in auto/build.
+
+  [ Colin Watson ]
+  * BuildLiveCD: Make sure livecd-rootfs is still installed in the chroot
+    after the dist-upgrade.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 11 Aug 2011 12:19:58 +0100
+
+livecd-rootfs (2.21) oneiric; urgency=low
+
+  * make sure ac100 images have universe enabled since the kernel lives there.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 10 Aug 2011 13:14:25 +0200
+
+livecd-rootfs (2.20) oneiric; urgency=low
+
+  * make sure the right packages are installed on armel+ac100 subarch builds 
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 09 Aug 2011 16:25:11 +0200
+
+livecd-rootfs (2.19) oneiric; urgency=low
+
+  * Add support for building a pool of packages into the live config:
+    - define SEEDMIRROR, PREINSTALL_POOL, PREINSTALL_POOL_SEEDS in config
+    - set PREINSTALL_POOL_SEEDS to "server-ship" for ubuntu-server
+    - crib seed inheritance logic from cdimage implementation of same
+    - run germinate against seeds from SEEDMIRROR if to populate
+      PREINSTALL_POOL with a list of packages from PREINSTALL_POOL_SEEDS
+    - create a local-hook to download PREINSTALL_POOL packages to rootfs
+  * And add support to deal with the above pool of packages during build:
+    - generate a GPG key in the background if we're going to need one
+    - create a sources.list.d entry pointing at the rootfs pool
+    - create a Packages file and create and sign a Release file
+    - add our previously-generated key to the apt keyring and toss it
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 26 Jul 2011 15:26:01 -0600
+
+livecd-rootfs (2.18) oneiric; urgency=low
+
+  * export LB_LINUX_FLAVOURS="none" in auto/clean, so the clean
+    routine doesn't bomb out with no kernels selected.  This almost
+    certainly needs fixing in live-build, but works here for now 
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 15 Jul 2011 18:21:28 -0600
+
+livecd-rootfs (2.17) oneiric; urgency=low
+
+  * Only set KERNEL_FLAVOURS to SUBARCH if SUBARCH is already set.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 15 Jul 2011 14:55:13 -0600
+
+livecd-rootfs (2.16) oneiric; urgency=low
+
+  * Add support for building new "ubuntu-core" rootfs tarballs:
+    - add project support to BuildLiveCD and auto/config
+    - make auto/config and auto/build deal with plain FS types
+    - add some logic to auto/build to not choke with no kernels
+  * Minor cleanups to BuildLiveCD (LANG=C, bump current suite)
+  * Fix one spot where I missed future-proofing ext4 support
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 15 Jul 2011 11:19:49 -0600
+
+livecd-rootfs (2.15) oneiric; urgency=low
+
+  * Support generating different binary image types using
+    BINARYFORMAT=iso-hybrid and so on (although this won't actually work
+    until we create a syslinux-themes-ubuntu package).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 14 Jul 2011 18:27:04 +0100
+
+livecd-rootfs (2.14) oneiric; urgency=low
+
+  * Handle package/task list changes in live-build 3.0~a22-1.
+  * Handle local sources.list changes in live-build 3.0~a22-1.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 13 Jul 2011 19:06:29 +0100
+
+livecd-rootfs (2.13) oneiric; urgency=low
+
+  * Didn't realize that you can pass multiple projects to BuildLiveCD.
+    Let's try SUBPROJECT using an argument.
+
+ -- Evan Dandrea <ev@ubuntu.com>  Wed, 06 Jul 2011 17:21:48 +0100
+
+livecd-rootfs (2.12) oneiric; urgency=low
+
+  [ Colin Watson ]
+  * Re-enable deb-src lines for Edubuntu (LP: #806428).
+
+ -- Evan Dandrea <ev@ubuntu.com>  Wed, 06 Jul 2011 16:57:39 +0100
+
+livecd-rootfs (2.11) oneiric; urgency=low
+
+  * Pass SUBPROJECT to live-build.
+
+ -- Evan Dandrea <ev@ubuntu.com>  Wed, 06 Jul 2011 11:59:24 +0100
+
+livecd-rootfs (2.10) oneiric; urgency=low
+
+  * Initial Wubi support.
+
+ -- Evan Dandrea <ev@ubuntu.com>  Mon, 04 Jul 2011 10:54:07 +0100
+
+livecd-rootfs (2.9) oneiric; urgency=low
+
+  * Rename the ARM headless image to ubuntu-server for oneiric
+  * Future-proof --chroot-filesystem support for a switch to ext4
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 28 Jun 2011 14:20:35 +0100
+
+livecd-rootfs (2.8) oneiric; urgency=low
+
+  * Use all_chroot_pyc-purge.sh hook from live-build 3.0~a21-1ubuntu4.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 22 Jun 2011 15:38:30 +0100
+
+livecd-rootfs (2.7) oneiric; urgency=low
+
+  * Install xubuntu-live for xubuntu, not edubuntu-live (LP: #800211).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 21 Jun 2011 17:41:26 +0100
+
+livecd-rootfs (2.6) oneiric; urgency=low
+
+  * '--initramfs none' produces *.packages* outputs rather than *.manifest*;
+    handle this.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 16 Jun 2011 12:59:09 +0100
+
+livecd-rootfs (2.5) oneiric; urgency=low
+
+  * Pass correct IMAGEFORMAT through to live-build from BuildLiveCD.
+  * Add Lubuntu support.
+  * Set --chroot-filesystem option if IMAGEFORMAT is ext2 or ext3.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 15 Jun 2011 14:40:05 +0100
+
+livecd-rootfs (2.4) oneiric; urgency=low
+
+  * Remove old config directory before creating a new configuration.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 15 Jun 2011 10:15:20 +0100
+
+livecd-rootfs (2.3) oneiric; urgency=low
+
+  * Set pipefail (bash-specific) in auto/build so that we fail immediately
+    if the main image build fails.
+  * Anchor regex to avoid misdetecting vmlinux-3.0-0-powerpc64-smp as a
+    powerpc flavour kernel.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 14 Jun 2011 09:16:43 +0100
+
+livecd-rootfs (2.2) oneiric; urgency=low
+
+  * Pass --linux-flavours to lb config if necessary.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 14 Jun 2011 08:30:10 +0100
+
+livecd-rootfs (2.1) oneiric; urgency=low
+
+  * Fix ordering of log file creation in BuildLiveCD.
+  * Fix permissions in BuildLiveCD when setting up auto directory.
+  * Switch from --binary-remove-linux to config/binary_rootfs/excludes.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 13 Jun 2011 23:32:40 +0100
+
+livecd-rootfs (2.0) oneiric; urgency=low
+
+  * Add live-build support.  The old livecd.sh is still here for
+    compatibility, but this package's primary purpose is now to provide
+    Ubuntu-specific configuration for live-build.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 13 Jun 2011 12:35:47 +0100
+
+livecd-rootfs (1.167) oneiric; urgency=low
+
+  * Drop language-support-en from LIVELIST for kubuntu-mobile and
+    kubuntu-netbook; it's not in the oneiric archive any more, and the
+    necessary packages are already in the respective tasks.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sun, 29 May 2011 21:10:36 +0100
+
+livecd-rootfs (1.166) natty; urgency=low
+
+  * Make the output kernel world-readable, since it was changed to be
+    world-unreadable in linux 2.6.38-8.40.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 07 Apr 2011 11:41:01 +0100
+
+livecd-rootfs (1.165) natty; urgency=low
+
+  * Drop the hack that removes ubiquity-slideshow-* on armel, webkit works
+    again.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 16 Mar 2011 12:09:28 +0100
+
+livecd-rootfs (1.164) natty; urgency=low
+
+  * Use Edubuntu theming for Edubuntu LTSP chroot.
+
+ -- Jonathan Carter <jonathan@ubuntu.com>  Mon, 14 Mar 2011 10:03:33 +0000
+
+livecd-rootfs (1.163) natty; urgency=low
+
+  * make sure preinstalled images do not have the build machine set as
+    hostname before oem-config runs (LP: #605972)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 10 Mar 2011 14:48:43 +0100
+
+livecd-rootfs (1.162) natty; urgency=low
+
+  * the name of the flavour needs to be ubuntu-headless, not just headless
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 09 Mar 2011 16:48:28 +0100
+
+livecd-rootfs (1.161) natty; urgency=low
+
+  * add ubuntu-headless as allowed flavour to BuildLiveCD
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 09 Mar 2011 13:51:11 +0100
+
+livecd-rootfs (1.160) natty; urgency=critical
+
+  * Emergency hack to remove ubiquity-slideshow-* on armel due to python-webkit
+    causing a segfault (Works aroud LP: #727368)
+
+ -- Michael Casadevall <mcasadevall@ubuntu.com>  Wed, 02 Mar 2011 11:33:51 -0800
+
+livecd-rootfs (1.159) natty; urgency=low
+
+  * create an empty swapfile on ext2/3 images by default, we care for use
+    or deletion on first boot, this cuts of 3min from the first boot of 
+    preinstalled images.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 23 Feb 2011 14:55:06 +0100
+
+livecd-rootfs (1.158) natty; urgency=low
+
+  * switch default session for armel netbook images to unity-2d
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 15 Feb 2011 18:20:57 +0100
+
+livecd-rootfs (1.157) natty; urgency=low
+
+  * drop IGEPv2 x-loader and u-boot from livefs.sh, they are not in main 
+    and thus break image builds
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sat, 12 Feb 2011 13:32:59 +0100
+
+livecd-rootfs (1.156) natty; urgency=low
+
+  * Add X-Loader and U-Boot packages for IGEPv2, Beagle and Panda
+    in the OMAP3/4 images.
+
+ -- Jani Monoses <jani@ubuntu.com>  Fri, 11 Feb 2011 17:21:27 +0200
+
+livecd-rootfs (1.155) natty; urgency=low
+
+  * Add headless image type for armel minimal developer image building,
+    same as base now, but may be modified later.
+  * Disable running of flash-kernel on armel as it breaks the script when
+    there is no boot partition available to update.
+
+ -- Jani Monoses <jani@ubuntu.com>  Wed, 26 Jan 2011 14:01:18 +0200
+
+livecd-rootfs (1.154) natty; urgency=low
+
+  * apply setting of the default session to all ubuntu-armel builds
+    so we do not need to do this on first boot.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 10 Jan 2011 23:27:43 +0100
+
+livecd-rootfs (1.153) natty; urgency=low
+
+  * Update default suite in BuildLiveCD to natty.
+  * Use --force-unsafe-io for all dpkg operations.  If we crash we'll just
+    destroy the chroot and start from scratch, so syncing is pointless.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 04 Dec 2010 12:02:15 +0000
+
+livecd-rootfs (1.152) maverick; urgency=low
+
+  * livecd.sh:
+    - Restore the keyring earlier in the chroot (before the dist-upgrade).
+      This fixes the missng key for the extras.ubuntu.com that is added
+      during the livecd build dist-ugprade (LP: #650525)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 30 Sep 2010 14:32:57 +0200
+
+livecd-rootfs (1.151) maverick; urgency=low
+
+  * enforce installation of only suitable header packages for the respective
+    subarch on armel instead of blindly installing all armel headers (LP: #600478)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 24 Sep 2010 14:54:53 +0200
+
+livecd-rootfs (1.150) maverick; urgency=low
+
+  * Set GDM's default session to une-efl on ubuntu-netbook armel+dove.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 31 Aug 2010 19:44:43 +0100
+
+livecd-rootfs (1.149) maverick; urgency=low
+
+  * Fix syntax error in icon cache checks.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 31 Aug 2010 12:36:42 +0100
+
+livecd-rootfs (1.148) maverick; urgency=low
+
+  * Add universe support to kubuntu-mobile to work around seed change
+
+ -- Emmet Hikory <persia@ubuntu.com>  Thu, 26 Aug 2010 23:57:25 +0900
+
+livecd-rootfs (1.147) maverick; urgency=low
+
+  * Add support for kubuntu-mobile
+
+ -- Emmet Hikory <persia@ubuntu.com>  Thu, 26 Aug 2010 13:29:12 +0900
+
+livecd-rootfs (1.146) maverick; urgency=low
+
+  * Add a series of checkpoints where the current time is logged.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 20 Aug 2010 15:55:30 +0100
+
+livecd-rootfs (1.145) maverick; urgency=low
+
+  * raise inode count during ext2fs build to be able to use the full size of
+    the ext2 image
+  * drop debugging code
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sat, 31 Jul 2010 16:29:40 +0200
+
+livecd-rootfs (1.144) maverick; urgency=low
+
+  * cat /proc/mounts before trying to copy to the ext2 image, there still
+    seems to be some virtual fs mounted in the chroot we try to copy to the
+    image.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 27 Jul 2010 11:51:15 +0200
+
+livecd-rootfs (1.143) maverick; urgency=low
+
+  * add more spare space to the ext2 filesystem images to compensate journal
+    overhead and make it possible to run oem-config even without resizing
+  * do not reserve 5% for root in the ext2 image files.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 26 Jul 2010 14:26:08 +0200
+
+livecd-rootfs (1.142) maverick; urgency=low
+
+  * do not fail if losetup -d does not find a device
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 23 Jul 2010 10:39:16 +0200
+
+livecd-rootfs (1.141) maverick; urgency=low
+
+  * add some debug output to teh ext2 image creation to see whats going on
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 22 Jul 2010 18:29:53 +0200
+
+livecd-rootfs (1.140) maverick; urgency=low
+
+  * tell mke2fs that we _really_ want a filesystem on this "non-blockdevice"
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 22 Jul 2010 09:11:14 +0200
+
+livecd-rootfs (1.139) maverick; urgency=low
+
+  [ Steve Langasek ]
+  * One more undefined variable fix for set -u
+
+  [ Oliver Grawert ]
+  * drop genext2fs, it is simply to slow, instead we use a loop munted ext2
+    image now.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 21 Jul 2010 15:15:18 +0200
+
+livecd-rootfs (1.138) maverick; urgency=low
+
+  * Don't go overboard with the downgrading of packages; this probably caused
+    the rebuild failure attempts, we'll do without downgrading base packages
+    already installed by debootstrap in this use case.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Wed, 21 Jul 2010 09:18:48 +0200
+
+livecd-rootfs (1.137) maverick; urgency=low
+
+  * Make sure APT_SOURCE is always set.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 21 Jul 2010 07:52:47 +0100
+
+livecd-rootfs (1.136) maverick; urgency=low
+ 
+  * One more fix; if we're asking apt to downgrade packages, we have to
+    explicitly pass --force-yes.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Wed, 21 Jul 2010 01:08:31 +0200
+
+livecd-rootfs (1.135) maverick; urgency=low
+
+  * Implement the -a option in the right place - in livecd.sh, not in
+    BuildLiveCD.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 20 Jul 2010 22:38:10 +0200
+
+livecd-rootfs (1.134) maverick; urgency=low
+
+  * Add -a option to BuildLiveCD to allow pulling from an additional apt
+    source.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 20 Jul 2010 18:25:13 +0200
+
+livecd-rootfs (1.133) maverick; urgency=low
+
+  * adjust BuildLiveCD PUBDIR variable to match reality (uses SUBARCH on the
+    buildd)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 16 Jul 2010 15:56:01 +0200
+
+livecd-rootfs (1.132) maverick; urgency=low
+
+  * BuildLiveCD: revert change from revno 284 that adds subarch to the logfile
+    names as it breaks mailing of the logs from the cdimage buildlive script
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 15 Jul 2010 11:19:54 +0200
+
+livecd-rootfs (1.131) maverick; urgency=low
+
+  * add support for omap4 images
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 02 Jul 2010 11:24:55 +0200
+
+livecd-rootfs (1.130) maverick; urgency=low
+
+  * Revert to version 1.127: we do want the subarch in the filename so these
+    files can coexist in the same directory, as they do for all other archs.
+  * BuildLiveCD: drop the subarch from the directory name, which has never
+    made sense; but we don't want this to go live without coordination with
+    cdimage.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 29 Jun 2010 17:46:46 -0700
+
+livecd-rootfs (1.129) maverick; urgency=low
+
+  * fix typo
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 30 Jun 2010 01:11:51 +0200
+
+livecd-rootfs (1.128) maverick; urgency=low
+
+  * do not mangle the project name by attaching the subarch to it on armel,
+    this results in livefs names that confuse find-live_filesystem
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 29 Jun 2010 23:04:10 +0200
+
+livecd-rootfs (1.127) maverick; urgency=low
+
+  * make BuildLiveCD set $SUBARCHARG properly again, else livecd.sh doesnt get
+    the necessary option handed over.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 29 Jun 2010 12:54:35 +0200
+
+livecd-rootfs (1.126) maverick; urgency=low
+
+  * Set LIVE_BOOT_SCRIPTS to "casper lupin-casper" for non-jasper builds,
+    rather than leaving it empty.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 28 Jun 2010 16:50:23 +0100
+
+livecd-rootfs (1.125) maverick; urgency=low
+
+  * make livecd.sh not fail if e2fsck returns non-zero (which is always the
+    case with genext2fs images due to bug 583317)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 28 Jun 2010 16:27:51 +0200
+
+livecd-rootfs (1.124) maverick; urgency=low
+
+  * BuildLiveCD: update livecd chroot at start of run, for freshest
+    livecd-rootfs package.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Sat, 26 Jun 2010 07:37:46 -0600
+
+livecd-rootfs (1.123) maverick; urgency=low
+
+  * Make sure LIVE_BOOT_SCRIPTS is always defined.
+  * Convert to source format 3.0 (native).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 26 Jun 2010 10:28:40 +0100
+
+livecd-rootfs (1.122) maverick; urgency=low
+
+  * livecd.sh don't set a variable to itself, especially when the variable
+    is empty and causes build failures under set -u.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 25 Jun 2010 21:59:16 -0700
+
+livecd-rootfs (1.121) maverick; urgency=low
+
+  [ LaMont Jones ]
+  * BuildLiveCD: only pass -f if we were told it, since older chroots don't
+    support it.
+
+  [ Oliver Grawert ]
+  * instead of special casing for only one arch, base jasper vs casper
+    inclusion on the IMAGETYPE variable
+  * depend on genext2fs
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 25 Jun 2010 17:30:28 +0200
+
+livecd-rootfs (1.120) maverick; urgency=low
+
+  * add special case to ubuntu-netbook on omap3 and 4, we want jasper instead of
+    casper in the initramfs
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 15 Jun 2010 16:34:25 +0200
+
+livecd-rootfs (1.119) maverick; urgency=low
+
+  * Depends: lzma
+  * drop tmpfs in general while allowing a envvar to enable it again
+
+ -- LaMont Jones <lamont@ubuntu.com>  Fri, 11 Jun 2010 08:37:17 -0600
+
+livecd-rootfs (1.118) maverick; urgency=low
+
+  * add temporary workaround for genext2fs bug 583317 (wrong filesystem
+    revision for ext3 filesystems)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 10 Jun 2010 07:38:05 +0200
+
+livecd-rootfs (1.117) maverick; urgency=low
+
+  * Only use tmpfs on amd64, due to space restrictions on the current
+    build machines.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Sat, 05 Jun 2010 06:50:24 -0600
+
+livecd-rootfs (1.116) maverick; urgency=low
+
+  [Michael Casadevall]
+  * added new -f switch for changing image build type
+  * added support for building ext2 and ext3 images in addition to squashfs
+  * fixed spacing in the livefs build code
+  * extended BuildLiveCD to handle the -f switch
+  * reworked BuildLiveCD command line parsing to be more sane
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 03 Jun 2010 18:40:10 +0200
+
+livecd-rootfs (1.115) maverick; urgency=low
+
+  * use a tmpfs for the livefs root directory, to get some speed
+    on the build machines. (ubuntu-dvd requires > 5GB, so use 8GB)
+
+ -- LaMont Jones <lamont@ubuntu.com>  Wed, 05 May 2010 10:42:00 -0600
+
+livecd-rootfs (1.114) lucid; urgency=low
+
+  * make sure STRIP_VMLINUZ=no is set for omap, also change the code to only
+    use the case statement for matching subarches instead of adding an extra
+    check.
+  * fix the comment for STRIP_VMLINUZ to reflect reality.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 20 Apr 2010 13:20:10 +0200
+
+livecd-rootfs (1.113) lucid; urgency=low
+
+  * fix typo
+
+ -- LaMont Jones <lamont@ubuntu.com>  Sat, 27 Mar 2010 21:10:16 -0600
+
+livecd-rootfs (1.112) lucid; urgency=low
+
+  * ltsp image needs to be readable
+
+ -- LaMont Jones <lamont@ubuntu.com>  Fri, 26 Mar 2010 20:23:41 -0600
+
+livecd-rootfs (1.111) lucid; urgency=low
+
+  * edubuntu-dvd/ltsp: mksquashfs needs the directory to exist
+  * clean up comments
+
+ -- LaMont Jones <lamont@ubuntu.com>  Fri, 26 Mar 2010 19:09:25 -0600
+
+livecd-rootfs (1.110) lucid; urgency=low
+
+  * Add support for armel+omap, and remove incorrect comments from the armel
+    kernel installation block.
+  * Really update the maintainer field.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Thu, 25 Mar 2010 00:49:17 +1100
+
+livecd-rootfs (1.109) lucid; urgency=low
+
+  * if the ltsp squashfs image build fails, fail the build.
+  * use mksquashfs directly, instead of ltsp-update-image
+
+ -- LaMont Jones <lamont@ubuntu.com>  Wed, 24 Mar 2010 05:15:39 -0600
+
+livecd-rootfs (1.108) lucid; urgency=low
+
+  * Deliver edubuntu-dvd/i386 ltsp squashfs image, since that's what
+    actually gets built these days.
+  * Update maintainer field.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Mon, 22 Mar 2010 21:40:59 -0600
+
+livecd-rootfs (1.107) lucid; urgency=low
+
+  * Deliver edubuntu/i386 ltsp sqaushfs image. LP: #531546
+  * fix typo in deciding to remove /usr/share/icons/*/icon-theme.cache
+    on kubuntu-ish images.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Wed, 17 Mar 2010 15:07:12 -0600
+
+livecd-rootfs (1.106) lucid; urgency=low
+
+  * Delete Gnome icon cache for Kubuntu images
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 23 Feb 2010 17:51:57 +0000
+
+livecd-rootfs (1.105) lucid; urgency=low
+
+  * Edubuntu is allowed to pull from universe; update livecd.sh accordingly
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 26 Jan 2010 17:17:35 -0800
+
+livecd-rootfs (1.104) lucid; urgency=low
+
+  * Rename Ubuntu Netbook Remix to Ubuntu Netbook.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Fri, 18 Dec 2009 14:16:26 +1100
+
+livecd-rootfs (1.103) lucid; urgency=low
+
+  * make sure there is no old squashfs around before attempting to squash a
+    new one.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 07 Dec 2009 11:27:50 +0100
+
+livecd-rootfs (1.102) lucid; urgency=low
+
+  * Don't output a newline in filesystem.size.
+
+ -- Evan Dandrea <evand@ubuntu.com>  Thu, 19 Nov 2009 14:57:10 -0600
+
+livecd-rootfs (0.101) lucid; urgency=low
+
+  * Write out the total size of uncompressed squashfs to be used by
+    partman and ubiquity.
+
+ -- Evan Dandrea <evand@ubuntu.com>  Wed, 18 Nov 2009 12:11:10 -0600
+
+livecd-rootfs (0.100) karmic; urgency=low
+
+  * UNR LIVELIST: list lupin-casper and laptop-detect explicitly and drop
+    ubiquity which is in the live seed already.  Fixes lack of wubi support in
+    UNR images; LP: #457246.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Thu, 22 Oct 2009 14:09:41 +0200
+
+livecd-rootfs (0.99) karmic; urgency=low
+
+  * Revert 0.98 change; it's actually much more wide-ranging than I thought as
+    it would cause each livefs build on a subarch to rotate the timestamped
+    dir and hence would mask the previous builds; and even if that would be
+    fixed, arch-indepedent filenames such as manifest/kernel/initrd/etc.
+    symlinks would clash.
+  * Rename EXTRASOURCE to PPA and also define PPAMIRROR near top, set to
+    ppa.launchpad.net.  Changing to PPA avoids listing non-main components in
+    deb lines and having an useful comment in sources.list.
+  * Create an etc/apt/preferences file Pin-ing the PPA at 550 when there's
+    one.
+  * Gross hack to reinstall the moblin-ppa-keyring package after the trusted
+    db is put back in place since otherwise we miss the GPG key we wanted.
+  * Fix computation of Origin fields for PPAs named "ppa" and document the
+    exception along with the expected format for the PPA var in comments.
+    LP: #434243
+  * Move the code taking a backup of the APT trusted keyring to just after
+    sources.list generation (this is safe since there's no apt call inbetween)
+    and move the installation of the moblin-archive-keyring just before the
+    backup is taken; this allows dropping the hack of reinstalling the keyring
+    package at the end of the build.  It might break apt-get update for UMR
+    before the host keys are appended to the trusted keyring though.
+  * Remove ${ROOT}var/cache/apt/{,src}pkgcache.bin after installing the moblin
+    keyring package, workaround for LP #442082.
+  * Run apt-get update one more time after installing the moblin keyring
+    package, to promote Release.gpg from APT's lists/partial/ to lists/.
+    Ideally APT would do that for us on apt-key updates.
+  * Also change computation of Origin field for PPAs when generating the final
+    APT config; ideally we wouldn't have to duplicate this code though;
+    perhaps the removal of APT preferences file can be limited to hardy too.
+    Also add an Explanation: header in the final preferences.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Sun, 04 Oct 2009 13:53:40 +0200
+
+livecd-rootfs (0.98) karmic; urgency=low
+
+  * Put livecd logs into project/ not project-subarch/.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Wed, 23 Sep 2009 09:46:43 +0200
+
+livecd-rootfs (0.97) karmic; urgency=low
+
+  [ Colin Watson ]
+  * Upgrade to debhelper v7.
+
+  [ Loïc Minier ]
+  * Make stripping of vmlinuz from livefs optional for uImage subarches where
+    we can't use this trick to save space and disable it on armel+dove.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Wed, 16 Sep 2009 00:52:18 +0200
+
+livecd-rootfs (0.96) karmic; urgency=low
+
+  [ Loïc Minier ]
+  * Append ${SUBARCH:+-$SUBARCH} to LOG filename for consistency.
+
+  [ Colin Watson ]
+  * Edubuntu's desktop task is edubuntu-desktop-gnome, not edubuntu-desktop.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 15 Sep 2009 13:13:10 +0100
+
+livecd-rootfs (0.95) karmic; urgency=low
+
+  * Add the EXTRASOURCE apt source to the "pristine" /etc/apt/sources.list.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Tue, 01 Sep 2009 17:34:57 +1000
+
+livecd-rootfs (0.94) karmic; urgency=low
+
+  [ Steve Kowalik ]
+  * Add support for UMR.
+
+  [ Loïc Minier ]
+  * Use ubuntu-moblin-live in LIVELIST instead of a hardcoded list.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Thu, 27 Aug 2009 12:36:10 +0200
+
+livecd-rootfs (0.93) karmic; urgency=low
+
+  * remove temporary enablement of universe from the armel subarchitectures
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 25 Aug 2009 18:38:07 +0200
+
+livecd-rootfs (0.92) karmic; urgency=low
+
+  * change armel+imx51 back to the proper metapackage name
+  * enable universe for armel+dove build
+  * drop armel fallback, we want to fail officially if no armel subarch is set
+  * clean some trailing whitespace in the armel subarch case statement
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 21 Aug 2009 19:33:15 +0200
+
+livecd-rootfs (0.91) karmic; urgency=low
+
+  [ Steve Kowalik ]
+  * Remove subarch hack for ubuntu-mid, it was never used.
+
+  [ Mario Limonciello ]
+  * Remove metapackage hack for mythbuntu.  Now that tasks are published for 
+    multiverse, it's no longer necessary.
+
+ -- Mario Limonciello <superm1@ubuntu.com>  Thu, 13 Aug 2009 22:19:26 -0500
+
+livecd-rootfs (0.90) karmic; urgency=low
+
+  * make armel imx51 build from universe for alpha4 until our kernel package
+    is in main.
+  * change linux metapackage name to linux-babbage on imx51 to reflect the new
+    name choice of the kernel team.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 11 Aug 2009 10:55:54 +0200
+
+livecd-rootfs (0.89) karmic; urgency=low
+
+  [ Michael Casadevall ]
+  * Move armel to subarchitectures so we can support dove .
+  * Made armel with no subarch default to imx51.
+
+  [ Steve Kowalik ]
+  * livecd.sh: Stop building UNR from universe.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Wed, 05 Aug 2009 14:20:37 +0100
+
+livecd-rootfs (0.88) karmic; urgency=low
+
+  [ Adam Conrad ]
+  * Make the sort file fetch a no-op for now, since the old URL was
+    hanging the builds, and we don't actually HAVE sort files.  If
+    that ever changes, we can undo this.
+
+  [ Mario Limonciello ]
+  * Install a hybrid of tasks and a meta package for mythbuntu to
+    boot out all the gnome stuff that's getting added by dependency
+    resolution order.
+
+ -- Mario Limonciello <superm1@ubuntu.com>  Thu, 23 Jul 2009 03:08:53 -0500
+
+livecd-rootfs (0.87) karmic; urgency=low
+
+  [ Timo Aaltonen ]
+  * livecd.sh: Don't mess with xorg.conf anymore, we don't install one
+    by default.
+
+  [ Colin Watson ]
+  * Clean up the chroot tree before trying to remove it, just in case
+    there's some leftover junk from a previous failed build.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 07 Jul 2009 13:07:47 +0100
+
+livecd-rootfs (0.86) karmic; urgency=low
+
+  [ Scott Kitterman ]
+  * BuildLiveCD: Add kubuntu-netbook, drop kubuntu-kde4
+  * livecd.sh: Support kubuntu-netbook, drop kubuntu-kde4
+
+  [ Steve Kowalik ]
+  * livecd.sh: Switch UNR to using ubuntu-netbook-remix^ and unr-live^. 
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Tue, 30 Jun 2009 12:13:08 +1000
+
+livecd-rootfs (0.85) karmic; urgency=low
+
+  * Compress the initrd with LZMA by default, now that the kernel supports
+    this across the board. Saves about 3MB on Ubuntu live CDs.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 23 Jun 2009 17:28:19 +0100
+
+livecd-rootfs (0.84) karmic; urgency=low
+
+  * Don't force installation of libgoffice-gtk-0-6 on xubuntu; this package
+    is now obsolete.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Wed, 10 Jun 2009 13:22:11 -0700
+
+livecd-rootfs (0.83) karmic; urgency=low
+
+  * Don't fail if livecd.${FSS}.{kernel,initrd} already exist for some
+    reason.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 29 May 2009 11:38:18 +0200
+
+livecd-rootfs (0.82) karmic; urgency=low
+
+  [ Loic Minier ]
+  * Default suite is the current one as returned by $(lsb_release -cs); depend
+    on lsb-release (LP: #301963).
+  * Use dpkg --print-architecture as --print-installation-architecture is
+    deprecated.
+  * Don't explicitely install linux-headers-imx51 on armel; all other arches
+    get around this requirement by explicitely seeding the headers in
+    desktop-common which we do as well.
+
+  [ Colin Watson ]
+  * Remove -nolzma option from mksquashfs, since (a) it's been the default
+    since squashfs 1:3.3-1ubuntu1, and (b) it's no longer available in 4.0.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 29 May 2009 09:19:59 +0200
+
+livecd-rootfs (0.81) karmic; urgency=low
+
+  * ia64 uses -ia64 kernels across the board now.
+  * BuildLiveCD: default to karmic.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 09 May 2009 00:34:38 +0100
+
+livecd-rootfs (0.80) jaunty; urgency=low
+
+  * Add standard^ to UNR.
+  * Add mobile-live^ to LIVELIST for MID and UNR. (LP: #358095)
+  * Only build UNR from main, restricted and universe.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Thu, 16 Apr 2009 20:46:30 +1000
+
+livecd-rootfs (0.79) jaunty; urgency=low
+
+  * Use the --purge option to 'apt-get install', to ensure that any packages
+    removed as a result of Conflicts are purged (LP: #327821).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 03 Apr 2009 01:06:18 +0100
+
+livecd-rootfs (0.78) jaunty; urgency=low
+
+  * Use the imx51 kernel on armel.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Mon, 23 Mar 2009 09:49:30 +1100
+
+livecd-rootfs (0.77) jaunty; urgency=low
+
+  * Remove the D-Bus machine identifier from the livefs; it needs to be
+    unique, and it's generated at boot time if it's missing (LP: #322830).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 29 Jan 2009 17:21:23 +0000
+
+livecd-rootfs (0.76) jaunty; urgency=low
+
+  * Allow kernel-less builds for armel for now (see
+    https://wiki.ubuntu.com/Specs/ARMImageSelection).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 20 Jan 2009 23:39:56 +0000
+
+livecd-rootfs (0.75) jaunty; urgency=low
+
+  [ Steve Langasek ]
+  * BuildLiveCD: recognize 'mythbuntu' and 'ubuntu-mobile' as valid project
+    names
+
+  [ Colin Watson ]
+  * BuildLiveCD: add ubuntu-umpc too.
+
+  [ Steve Kowalik ]
+  * BuildLiveCD: Add ubuntu-netbook-remix.
+  * livecd.sh: Support ubuntu-netbook-remix. 
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Sat, 10 Jan 2009 11:08:29 +1100
+
+livecd-rootfs (0.74) jaunty; urgency=low
+
+  * For mythbuntu livefs builds, we don't have tasks yet. They will be
+    coming in a future build of Soyuz, so for now just use the 
+    metapackages instead.
+
+ -- Mario Limonciello <superm1@ubuntu.com>  Sat, 08 Nov 2008 09:49:56 -0600
+
+livecd-rootfs (0.73) jaunty; urgency=low
+
+  [ Colin Watson ]
+  * Add ubuntu-umpc support (equivalent to previous ubuntu-mobile).
+
+  [ Mario Limonciello ]
+  * Add Mythbuntu support.
+  * BuildLiveCD: default to jaunty.
+
+ -- Mario Limonciello <superm1@ubuntu.com>  Tue, 04 Nov 2008 19:28:35 -0600
+
+livecd-rootfs (0.72) intrepid; urgency=low
+
+  * Fix source mirror for -updates in generated sources.list (it was
+    incorrect for ports architectures).
+  * Fix description of universe in generated sources.list: packages there
+    are expected to be under a free licence.
+  * Enable universe and multiverse for DVDs (there isn't generally enough
+    space on CDs; see LP #105511).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 09 Oct 2008 02:13:41 +0100
+
+livecd-rootfs (0.71) intrepid; urgency=low
+
+  * change mobile to use the mobile-mobile task instead of teh metapackage for
+    building images
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 29 Sep 2008 23:24:15 +0200
+
+livecd-rootfs (0.70) intrepid; urgency=low
+
+  * linux-lpia-meta exists, change lpia's kernel back to linux-lpia.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Fri, 26 Sep 2008 16:09:54 +1000
+
+livecd-rootfs (0.69) intrepid; urgency=low
+
+  * add ubuntu-mobile to build targets
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 23 Sep 2008 12:46:50 +0200
+
+livecd-rootfs (0.68) intrepid; urgency=low
+
+  * Unmount /proc/sys/fs/binfmt_misc, in case binfmt-support is installed
+    and manages to mount it.
+  * Move MOUNTS variable into cleanup function for clarity; it's used
+    nowhere else.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 22 Sep 2008 11:52:22 +0100
+
+livecd-rootfs (0.67) intrepid; urgency=low
+
+  * Bump linux-lpia to -3.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Mon, 15 Sep 2008 16:41:34 +1000
+
+livecd-rootfs (0.66) intrepid; urgency=low
+
+  * Remove a bunch of seeded packages from ubuntu-mid's LIST.
+  * Move casper from ubuntu-mid's LIST to LIVELIST.
+  * Add ubiquity to ubuntu-mid's LIVELIST.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Thu, 11 Sep 2008 19:02:52 +1000
+
+livecd-rootfs (0.65) intrepid; urgency=low
+
+  * Fiddle the kernel name for lpia.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Tue, 09 Sep 2008 09:21:10 +1000
+
+livecd-rootfs (0.64) intrepid; urgency=low
+
+  * Add support for building Ubuntu MID images.
+    - Includes changing the kernel name for lpia due to the lack of meta
+      package for the time being.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Fri, 22 Aug 2008 18:10:38 +1000
+
+livecd-rootfs (0.63) intrepid; urgency=low
+
+  * Do not install xresprobe, it is not necessary any more and in universe
+    now.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 13 Aug 2008 09:45:15 +0200
+
+livecd-rootfs (0.62) intrepid; urgency=low
+
+  * Use 'set -eu' rather than putting -eu on the #! line, so that running
+    'sh -x /usr/sbin/livecd.sh' for testing doesn't invoke different
+    error-handling behaviour.
+  * Remove the kernel from the livefs; ubiquity >= 1.9.4 will copy it from
+    the CD root if it needs to (LP: #80385).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 18 Jul 2008 20:01:15 +0100
+
+livecd-rootfs (0.61) intrepid; urgency=low
+
+  * Use apt pinning to force use of the version of ssl-cert from the hardy
+    release pocket, not the one from -updates, so we avoid pulling in the
+    very large openssl-blacklist package that we don't need on live CDs
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 20 Jun 2008 13:53:17 -0700
+
+livecd-rootfs (0.60) intrepid; urgency=low
+
+  * Employ hideous hack to ensure that when we're building against
+    updates/proposed, we only get one version of kernel headers.
+  * Move the cleanup() call to the end of the script, so we still
+    have proc mounted for coreutils when update-initramfs is run.
+  * Mount dev/pts immediately after debootstrap, as dpkg has begun
+    whining pretty loudly (and occasionally exiting) if it's gone.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 10 Jun 2008 17:20:10 -0600
+
+livecd-rootfs (0.59) intrepid; urgency=low
+
+  [ Colin Watson ]
+  * Remove /boot/initrd.img-*.bak (LP: #64887).
+
+  [ Adam Conrad ]
+  * Resurrect the proposed option for livecd.sh/BuildLiveCD, so
+    we can build test images that include packages from proposed.
+  * Build with updates and security by default, which is a no-op
+    on development releases (where these suites are empty), but
+    a necessity for point-release image building.
+  * Copy bin/true from the chroot, not from the real root, so
+    image builds for i386/lpia work on amd64, as intended.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 10 Jun 2008 13:23:18 -0600
+
+livecd-rootfs (0.58) intrepid; urgency=low
+
+  * Fix up BuildLiveCD to only pass -a$ARCH when building for intrepid,
+    and to disallow multi-suite builds (does anyone use it for this) of
+    suites >= intrepid and <= hardy in the same invocation.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 02 May 2008 15:44:17 -0600
+
+livecd-rootfs (0.57) intrepid; urgency=low
+
+  * Allow the user to specify the ARCH on the livecd.sh command line,
+    overriding the use of the dpkg architecture for the livecd run.
+  * Differentiate between ARCH (the local architecture) and TARGETARCH,
+    so that builds of ubuntu-lpia continue to work on the i386 buildd.
+  * Pass ARCH by default from BuildLiveCD to livecd.sh; this should be
+    manually overridden on cross-arch buildds, instead of using dpkg.
+  * Update default suite in BuildLiveCD to intrepid, gutsy's a bit old.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 02 May 2008 15:10:32 -0600
+
+livecd-rootfs (0.56) hardy; urgency=low
+
+  * Explicitly install language-support-en first for kubuntu-kde4
+    live, should stop apt wanting to install firefox for no good
+    reason.
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 13 Mar 2008 14:32:14 +0000
+
+livecd-rootfs (0.55) hardy; urgency=low
+
+  * All powerpc builds (including ps3) use the powerpc/powerpc64-smp kernels
+    now.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 27 Feb 2008 20:19:16 +0000
+
+livecd-rootfs (0.54) hardy; urgency=low
+
+  * Run /etc/cron.daily/mlocate rather than /etc/cron.daily/slocate.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 27 Feb 2008 06:54:12 +0000
+
+livecd-rootfs (0.53) hardy; urgency=low
+
+  * Set kubuntu-kde4 to universe
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 22 Feb 2008 09:42:15 +0000
+
+livecd-rootfs (0.52) hardy; urgency=low
+
+  * Enable *ubuntu-dvd and kubuntu-kde4 as known projects in BuildLiveCD
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Thu, 14 Feb 2008 15:58:31 -0800
+
+livecd-rootfs (0.51) hardy; urgency=low
+
+  [ Jonathan Riddell ]
+  * Add kubuntu-kde4
+
+  [ Steve Langasek ]
+  * Add new targets for {k,ed,}ubuntu-dvd
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Thu, 14 Feb 2008 10:15:33 -0800
+
+livecd-rootfs (0.50) hardy; urgency=low
+
+  * Switch Xubuntu to libgoffice-gtk-0-6.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 31 Jan 2008 17:22:35 +0000
+
+livecd-rootfs (0.49) hardy; urgency=low
+
+  * Allow Xubuntu to build against universe and multiverse.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 28 Jan 2008 16:33:06 +0000
+
+livecd-rootfs (0.48) hardy; urgency=low
+
+  * fix typo in getopts call so the -m and -S options are recognized
+  * drop call to non-existent sanitize command (LP: #179130)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 25 Jan 2008 17:40:57 +0100
+
+livecd-rootfs (0.47) hardy; urgency=low
+
+  * Fix versioned dependency to squashfs-tools. "." != "-", silly me.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu, 20 Dec 2007 14:17:47 +0100
+
+livecd-rootfs (0.46) hardy; urgency=low
+
+  * Use -nolzma option of mksquashfs, since our current kernel squashfs module
+    does not support it yet (see LP #177634). Bump dependency to
+    squashfs-tools to ensure availability of that option.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu, 20 Dec 2007 12:03:41 +0100
+
+livecd-rootfs (0.45) hardy; urgency=low
+
+  [ Colin Watson ]
+  * Vcs-Bzr is now an official field. Use an unauthenticated URL for it.
+
+  [ Bryce Harrington ]
+  * livecd.sh: Leave a token empty xorg.conf in place to let
+    xserver-xorg postinst know it needs to regenerate it. (LP: #174537)
+
+ -- Timo Aaltonen <tepsipakki@ubuntu.com>  Wed, 19 Dec 2007 01:23:32 +0200
+
+livecd-rootfs (0.44) hardy; urgency=low
+
+  * xubuntu seed change - libgoffice-gtk-0-4 --> libgoffice-gtk-0-5
+
+ -- Sarah Hobbs <hobbsee@ubuntu.com>  Fri, 30 Nov 2007 14:52:29 +1100
+
+livecd-rootfs (0.43) hardy; urgency=low
+
+  * Add Gobuntu support.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 29 Oct 2007 17:57:17 -0400
+
+livecd-rootfs (0.42) hardy; urgency=low
+
+  * Create /spu directory and spu group for powerpc+ps3 builds.
+  * Add XS-Vcs-Bzr field.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 24 Oct 2007 23:20:58 +0100
+
+livecd-rootfs (0.41) gutsy; urgency=low
+
+  * Log the size of doc directories to stdout.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sun, 07 Oct 2007 14:07:59 +0200
+
+livecd-rootfs (0.40) gutsy; urgency=low
+
+  * Set CASPER_GENERATE_UUID=1 to tell casper's initramfs hook to generate a
+    UUID which will be checked against the discovered medium (LP: #144800).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 04 Oct 2007 14:26:06 +0100
+
+livecd-rootfs (0.39) gutsy; urgency=low
+
+  * Print the file size in fdupes output as well.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 04 Oct 2007 12:28:27 +0200
+
+livecd-rootfs (0.38) gutsy; urgency=low
+
+  * Avoid the ${ROOT} prefix in fdupes output, compact and sort the output.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 04 Oct 2007 10:13:48 +0200
+
+livecd-rootfs (0.37) gutsy; urgency=low
+
+  * Run fdupes on ${ROOT}/usr.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 03 Oct 2007 16:46:14 +0200
+
+livecd-rootfs (0.36) gutsy; urgency=low
+
+  * Change the names of ia64 kernels to the right (non-SMP since they're
+    merged) ones.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Wed, 26 Sep 2007 13:50:19 -0600
+
+livecd-rootfs (0.35) gutsy; urgency=low
+
+  * Use linux-cell rather than linux-ps3.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 25 Sep 2007 12:36:20 +0100
+
+livecd-rootfs (0.34) gutsy; urgency=low
+
+  * Rearrange lpia mirror selection hacks to work properly; FS isn't set
+    until a bit later on.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 08 Sep 2007 22:56:32 +0100
+
+livecd-rootfs (0.33) gutsy; urgency=low
+
+  [ Adam Conrad ]
+  * Implement hideous hacks to build lpia mixed-arch livecds for developers
+    to test with.  This should be reverted ASAP once LPIA main is built.
+  * Add missing ${ROOT}sys to $MOUNTS; a bug exposed by a buggy debootstrap.
+
+  [ Colin Watson ]
+  * Add lupin-casper as well as casper, for installer-for-windows.
+  * Revert most of the lpia hacks now that most of main is built, though we
+    still need a few of them to make the ubuntu-lpia project work.
+  * Move powerpc to ports.ubuntu.com.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 07 Sep 2007 19:11:03 +0100
+
+livecd-rootfs (0.32) gutsy; urgency=low
+
+  * For Edubuntu images, include the intersection of edubuntu-ship-addon and
+    edubuntu-live in manifest-desktop, so that packages also on the add-on
+    CD aren't removed after installation by ubiquity.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 21 Jul 2007 14:43:09 +0100
+
+livecd-rootfs (0.31) gutsy; urgency=low
+
+  * Remove a duplicate "copyright" from debian/copyright.  Typing is hard.
+  * Bump SOVER for libgoffice-gtk to make Xubuntu builds happy again.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 18 Jul 2007 10:39:08 +0100
+
+livecd-rootfs (0.30) gutsy; urgency=low
+
+  * Relicense livecd.sh under the terms of the GPLv2, in preparation
+    for our first public release of this hideous mess of shell.
+  * Merge in Colin Watson's subarch hacks from the production buildds.
+  * Update copyright again, this time only seven months late!
+  * Change the maintainer in debian/control to me; so long, LaMont.
+  * Install the BuildLiveCD script to doc/examples, so we have a handy
+    place to yank it from, and to provide an example of our SSH trigger.
+  * Remove duplicate debconf cruft from the chroot before building.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 10 Jul 2007 10:48:04 +0100
+
+livecd-rootfs (0.29) UNRELEASED; urgency=low
+
+  * Update copyright to 2006, 9 months late is better than never, right?
+  * Update kernels for i386 and amd64 to reflect recent renaming.
+  * Remove all cloop-related code, we're now squashfs-only on all arches.
+  * Add mirror information to make things work faster on my network.
+  * Swap out more metapackages for tasks (ubuntu-minimal/ubuntu-standard)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Thu, 21 Sep 2006 10:37:09 +1000
+
+livecd-rootfs (0.28) UNRELEASED; urgency=low
+
+  * Welcome to Edgy... Switch the default i386 kernel to -686, yay!
+  * And when I say "edgy", I really mean it (ie: change the suite too)
+  * Add the use of a sortfile from Tollef to the squashfs invocation.
+  * s/libgoffice-gtk-1-2/libgoffice-gtk-0-3/ for the xubuntu hint.
+  * s/ubuntu-base/ubuntu-minimal ubuntu-standard/g for seed changes.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Mon, 28 Aug 2006 03:40:28 +1000
+
+livecd-rootfs (0.27) UNRELEASED; urgency=low
+
+  [ Adam Conrad ]
+  * Copy the kernel out of the livefs as well, so we have one that matches.
+  * Enable rudimentary support for squashfs filesystems, initially enabling
+    it on the primary architectures only (powerpc, i386, amd64)
+  * Split the package LIST into LIST and LIVELIST, and generate a manifest
+    before installing LIVELIST, so espresso can calculate the difference.
+  * Use --print-installation-architecture instead of --print-architecture
+  * Special-case kubuntu cloops to be slightly larger, so we don't overflow.
+  * Make sparc use archive.ubuntu.com, it's no longer a ports arch.
+  * Add xubuntu support to livecd.sh, including hackish workarounds.
+  * Reset the debconf frontend after we're all done with the chroot.
+
+  [ LaMont Jones ]
+  * umount /var/{run,lock}
+  * changes for launchpad archive (ftpmaster.internal instead of jackass)
+
+ -- LaMont Jones <lamont@debian.org>  Wed,  8 Feb 2006 10:49:27 -0700
+
+livecd-rootfs (0.26) hoary-cat; urgency=low
+
+  [ Adam Conrad ]
+  * Copy the initrd out of the livefs for us in the SimplifiedLiveCD setup
+
+  [ LaMont Jones ]
+  * linux-image-power{3,4} -> powerpc64-smp
+  * casper needs to be in the livecd image (change base).
+
+ -- LaMont Jones <lamont@ubuntu.com>  Fri, 23 Dec 2005 09:37:57 -0700
+
+livecd-rootfs (0.25) hoary-cat; urgency=low
+
+  [ LaMont Jones ]
+  * Really use e2fs-zero.py: it needs -w.  Comment out partimage.
+  * edubuntu/kubuntu need to use ubuntu-base
+
+  [ Adam Conrad ]
+  * Make livecd.sh umount the lrm tmpfs during the cleanup process.
+  * Make our sources.list use SECSRCMIRROR instead of SRCMIRROR for security
+    sources, defaulting to SECMIRROR for release arches and SRCMIRROR for
+    ports (since ports don't have security binaries and sources in one place)
+
+ -- LaMont Jones <lamont@ubuntu.com>  Thu, 24 Nov 2005 10:13:33 -0700
+
+livecd-rootfs (0.24) hoary-cat; urgency=low
+
+  [ LaMont Jones ]
+  * Incorporate e2fs-zero.py from Paul Sladen:
+    http://www.paul.sladen.org/ubuntu/e2fszero/e2fs-zero.py
+    And use it instead of partimage.  Suggest: partimage instead of
+    Recommends.
+  * Print package version during script run.
+  * some HPPA fixes, allow architectures to have more than just main.
+  * add debian/compat
+  * Add --resolve-deps to debootstrap command.
+
+  [ Adam Conrad ]
+  * Incorporate 'tocd' target, including hideous hack to get the
+    germinate output from Colin's lists at people.ubuntu.com
+
+ -- LaMont Jones <lamont@canonical.com>  Tue, 25 Oct 2005 12:00:45 -0600
+
+livecd-rootfs (0.23) hoary-cat; urgency=low
+
+  * use kubuntu-live in the kubuntu case, per cjwatson.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Thu,  8 Sep 2005 09:48:12 -0600
+
+livecd-rootfs (0.22) hoary-cat; urgency=low
+
+  * rm -f etc/X11/xorg.conf, per #13788
+
+ -- LaMont Jones <lamont@ubuntu.com>  Mon, 22 Aug 2005 22:07:10 -0600
+
+livecd-rootfs (0.21) hoary-cat; urgency=low
+
+  * a bit more ports.ubuntu.com cleanup: deb-src still needs to point at
+    archive.ubuntu.com.
+  * postfix isn't there anymore, make the postfix stripping stuff conditional.
+  * nuke the update-notifier messages
+
+ -- LaMont Jones <lamont@ubuntu.com>  Thu, 18 Aug 2005 12:09:49 -0600
+
+livecd-rootfs (0.20) hoary-cat; urgency=low
+
+  * incorporate ports.ubuntu.com repositories
+  * make distro name a parameter.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Tue, 17 May 2005 21:39:24 -0600
+
+livecd-rootfs (0.19) hoary; urgency=low
+
+  * Add 'base' target
+
+ -- LaMont Jones <lamont@ubuntu.com>  Wed, 13 Apr 2005 18:43:04 -0600
+
+livecd-rootfs (0.18) hoary; urgency=low
+
+  * set +e affects callers.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Tue,  5 Apr 2005 16:20:32 -0600
+
+livecd-rootfs (0.17) hoary; urgency=low
+
+  * locales cleanup.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Mon,  7 Mar 2005 09:53:54 -0700
+
+livecd-rootfs (0.16) hoary; urgency=low
+
+  * Bunch of cleanup for kubunut-live.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Thu,  3 Mar 2005 16:02:21 -0700
+
+livecd-rootfs (0.15) hoary; urgency=low
+
+  * Can't have arch-specific Depends.  Poor partimage.
+
+ -- LaMont Jones <lamont@debian.org>  Sun, 27 Feb 2005 14:31:27 -0700
+
+livecd-rootfs (0.14) hoary; urgency=low
+
+  * Remove /etc/resolv.conf from the chroot.  Closes: #6954
+
+ -- LaMont Jones <lamont@ubuntu.com>  Sat, 26 Feb 2005 18:39:22 -0700
+
+livecd-rootfs (0.13) hoary; urgency=low
+
+  * Add ubuntu-live
+
+ -- LaMont Jones <lamont@canonical.com>  Fri, 11 Feb 2005 18:25:24 -0700
+
+livecd-rootfs (0.12) hoary; urgency=low
+
+  * partimage likes having TERM=vt100, better than a nonexistant one.
+
+ -- LaMont Jones <lamont@debian.org>  Fri, 21 Jan 2005 23:36:41 -0700
+
+livecd-rootfs (0.11) hoary; urgency=low
+
+  * apt-get update in the final chroot
+  * Change partimage depend to be [ !64-bit ], use partimage conditionally
+
+ -- LaMont Jones <lamont@debian.org>  Fri, 21 Jan 2005 22:47:46 -0700
+
+livecd-rootfs (0.10) hoary; urgency=low
+
+  * Actually run /usr/sbin/locale-gen to generate the locales.
+  * Try zero-filling the fsimage file
+
+ -- LaMont Jones <lamont@debian.org>  Thu, 20 Jan 2005 19:14:45 -0700
+
+livecd-rootfs (0.9) hoary; urgency=low
+
+  * Can't divert conffiles, nor do we need to anymore.
+
+ -- LaMont Jones <lamont@debian.org>  Wed, 19 Jan 2005 16:54:45 -0700
+
+livecd-rootfs (0.8) hoary; urgency=low
+
+  * Pre-generate some locales (en_{US,GB,ZA}.UTF-8)
+
+ -- LaMont Jones <lamont@debian.org>  Sat, 15 Jan 2005 07:55:12 -0700
+
+livecd-rootfs (0.7) hoary; urgency=low
+
+  * rsync does not love what we do in cloop.  :(
+
+ -- LaMont Jones <lamont@debian.org>  Fri, 14 Jan 2005 22:13:03 -0700
+
+livecd-rootfs (0.6) hoary; urgency=low
+
+  * fix typos in livecd.sh.  sigh.
+
+ -- LaMont Jones <lamont@debian.org>  Fri, 14 Jan 2005 21:18:57 -0700
+
+livecd-rootfs (0.5) hoary; urgency=low
+
+  * Buildd various .cloop filesystems, to see if rsync loves us
+
+ -- LaMont Jones <lamont@debian.org>  Thu, 13 Jan 2005 12:34:30 -0700
+
+livecd-rootfs (0.4) hoary; urgency=low
+
+  * Need to actually umount the fsimg before compressing it.
+
+ -- LaMont Jones <lamont@debian.org>  Tue, 11 Jan 2005 15:21:32 -0700
+
+livecd-rootfs (0.3) hoary; urgency=low
+
+  * add manifest file
+
+ -- LaMont Jones <lamont@debian.org>  Sun,  9 Jan 2005 13:27:07 -0700
+
+livecd-rootfs (0.2) hoary; urgency=low
+
+  * Better divertion setup, fix sources.list
+  * copyright in file.
+  * Flush postfix's queue of the install mail
+
+ -- LaMont Jones <lamont@debian.org>  Fri,  7 Jan 2005 13:00:37 -0700
+
+livecd-rootfs (0.1) hoary; urgency=low
+
+  * Initial revision
+
+ -- LaMont Jones <lamont@canonical.com>  Thu,  6 Jan 2005 21:24:08 -0700
