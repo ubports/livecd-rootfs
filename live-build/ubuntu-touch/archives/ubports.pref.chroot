@@ -1,0 +1,3 @@
+Package: *
+Pin: release a=xenial-7.1-caf-sudoku
+Pin-Priority: 5000
