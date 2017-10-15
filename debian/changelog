@@ -1,24 +1,25 @@
-livecd-rootfs (2.300.2+vivid19ubports5) vivid; urgency=medium
+livecd-rootfs (2.500.2+xenial19ubports5) xenial; urgency=medium
 
   * Remove hardcoded packages that goes into costum so they lands into main rootfs
+  * Bump version
 
  -- Marius Gripsgard <mariogrip@ubuntu.com>  Thu, 08 Jun 2017 00:25:41 +0200
 
 livecd-rootfs (2.300.2+vivid19ubports4) vivid; urgency=medium
 
-  * remove hash checks until we find a better method then updating this eveytime we change something 
+  * remove hash checks until we find a better method then updating this eveytime we change something
 
  -- Marius Gripsgard <mariogrip@ubuntu.com>  Tue, 23 May 2017 02:52:48 +0200
 
 livecd-rootfs (2.300.2+vivid19ubports3) vivid; urgency=medium
 
-  * remove post-debootstrap hash checks until we find a better method then updating this eveytime we change something 
+  * remove post-debootstrap hash checks until we find a better method then updating this eveytime we change something
 
  -- Marius Gripsgard <mariogrip@ubuntu.com>  Tue, 23 May 2017 00:27:31 +0200
 
 livecd-rootfs (2.300.2+vivid19ubports2) vivid; urgency=medium
 
-  * Allow unauthenticated clicks 
+  * Allow unauthenticated clicks
 
  -- Marius Gripsgard <mariogrip@ubuntu.com>  Fri, 05 May 2017 02:11:31 +0200
 
@@ -196,7 +197,7 @@ livecd-rootfs (2.298) vivid; urgency=low
     - shuffle install order around
   * snappy:
     + remove click-hook-framework
-    + remove /etc/init.d/grub-common 
+    + remove /etc/init.d/grub-common
 
  -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 16 Apr 2015 09:37:34 -0500
 
@@ -539,7 +540,7 @@ livecd-rootfs (2.267) vivid; urgency=low
   * live-build/ubuntu-core/hooks/10-remove-documentation.binary:
     - strip documentation
   * live-build/ubuntu-core/hooks/11-remove-extra-packages.chroot:
-    - remove extra packages like libicu52/libqt that are still on the 
+    - remove extra packages like libicu52/libqt that are still on the
       image because vivid system-image has a dependency on u-d-m which
       depends on libqt
   * live-build/ubuntu-core/hooks/12-add-docker-user.chroot:
@@ -658,7 +659,7 @@ livecd-rootfs (2.252) utopic; urgency=low
 
   [ James Hunt ]
   * Convert resolvconf hook from a chroot hook to a binary hook since lb
-    overwrites /etc/resolv.conf after the chroot hooks have run.  * 
+    overwrites /etc/resolv.conf after the chroot hooks have run.  *
 
  -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 09 Oct 2014 13:20:40 +0200
 
@@ -684,7 +685,7 @@ livecd-rootfs (2.249) utopic; urgency=medium
 livecd-rootfs (2.248) utopic; urgency=medium
 
   * live-build/ubuntu-core/hooks/06-handle_resolvconf.chroot: Configure
-    resolv.conf for Ubuntu Core. 
+    resolv.conf for Ubuntu Core.
   * live-build/ubuntu-core/hooks/07-configure-system-image-client.chroot:
     Configure system-image-cli's client.ini for Ubuntu Core. This can be
     dropped once bug 1373467 is fixed.
@@ -837,7 +838,7 @@ livecd-rootfs (2.231) utopic; urgency=medium
 livecd-rootfs (2.230) utopic; urgency=low
 
   * lp:~mvo/livecd-rootfs/ubuntu-core-system-image:
-    - install the "ubuntu-core" task and a kernel when building 
+    - install the "ubuntu-core" task and a kernel when building
       ubuntu-core with SUBPROJECT=system-image
 
  -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 28 Jul 2014 20:10:56 +0200
@@ -1068,7 +1069,7 @@ livecd-rootfs (2.200) trusty; urgency=low
 livecd-rootfs (2.199) trusty; urgency=low
 
   * make the click package installation check for proper architecture before
-    trying to install packages from the list, so that i386 touch builds do not 
+    trying to install packages from the list, so that i386 touch builds do not
     fall over with "wrong architecture" failures at the click install step.
 
  -- Oliver Grawert <ogra@ubuntu.com>  Tue, 26 Nov 2013 15:14:18 +0100
@@ -1255,7 +1256,7 @@ livecd-rootfs (2.173) saucy; urgency=low
 
 livecd-rootfs (2.172) saucy; urgency=low
 
-  * Reenabling click package installation hook. 
+  * Reenabling click package installation hook.
 
  -- Sergio Schvezov <sergio.schvezov@canonical.com>  Sun, 11 Aug 2013 19:03:53 -0300
 
@@ -1441,7 +1442,7 @@ livecd-rootfs (2.148) saucy; urgency=low
 
 livecd-rootfs (2.147) saucy; urgency=low
 
-  * sync ubuntu-touch customzation scripts with phablet build tree 
+  * sync ubuntu-touch customzation scripts with phablet build tree
 
  -- Oliver Grawert <ogra@ubuntu.com>  Mon, 03 Jun 2013 09:56:15 +0200
 
@@ -2195,7 +2196,7 @@ livecd-rootfs (2.48) precise; urgency=low
 
 livecd-rootfs (2.47) precise; urgency=low
 
-  * put ti-omap4-ppa into omap4 images 
+  * put ti-omap4-ppa into omap4 images
 
  -- Oliver Grawert <ogra@ubuntu.com>  Tue, 10 Jan 2012 12:46:20 +0100
 
@@ -2280,7 +2281,7 @@ livecd-rootfs (2.36) oneiric; urgency=low
   * BuildLiveCD: Install recommendations of ubuntu-defaults-builder.
 
   [ Oliver Grawert ]
-  * also store the size of the ac100 tarball in the initrd, since the tarball 
+  * also store the size of the ac100 tarball in the initrd, since the tarball
     changes its name several times during build we need a second criteria to not
     loop over all availiable tarballs with md5sum at install time.
 
@@ -2294,9 +2295,9 @@ livecd-rootfs (2.35) oneiric; urgency=low
 
 livecd-rootfs (2.34) oneiric; urgency=low
 
-  * drop FLASH_KERNEL_SKIP from live-build config, flash-kernel suppression is 
+  * drop FLASH_KERNEL_SKIP from live-build config, flash-kernel suppression is
     handled through a diversion already.
-  * add FLASH_KERNEL_SKIP explicitly to the post build ac100 update-initramfs 
+  * add FLASH_KERNEL_SKIP explicitly to the post build ac100 update-initramfs
     chroot call.
 
  -- Oliver Grawert <ogra@ubuntu.com>  Wed, 24 Aug 2011 14:16:55 +0200
@@ -2325,7 +2326,7 @@ livecd-rootfs (2.31) oneiric; urgency=low
 
 livecd-rootfs (2.30) oneiric; urgency=low
 
-  * provide .bootimg as a link to .bootimg-$FLAVOUR similar to the 
+  * provide .bootimg as a link to .bootimg-$FLAVOUR similar to the
     naming scheme we use for initrd and kernel files.
 
  -- Oliver Grawert <ogra@ubuntu.com>  Sat, 20 Aug 2011 10:58:30 +0200
@@ -2402,7 +2403,7 @@ livecd-rootfs (2.21) oneiric; urgency=low
 
 livecd-rootfs (2.20) oneiric; urgency=low
 
-  * make sure the right packages are installed on armel+ac100 subarch builds 
+  * make sure the right packages are installed on armel+ac100 subarch builds
 
  -- Oliver Grawert <ogra@ubuntu.com>  Tue, 09 Aug 2011 16:25:11 +0200
 
@@ -2427,7 +2428,7 @@ livecd-rootfs (2.18) oneiric; urgency=low
 
   * export LB_LINUX_FLAVOURS="none" in auto/clean, so the clean
     routine doesn't bomb out with no kernels selected.  This almost
-    certainly needs fixing in live-build, but works here for now 
+    certainly needs fixing in live-build, but works here for now
 
  -- Adam Conrad <adconrad@ubuntu.com>  Fri, 15 Jul 2011 18:21:28 -0600
 
@@ -2617,7 +2618,7 @@ livecd-rootfs (1.160) natty; urgency=critical
 livecd-rootfs (1.159) natty; urgency=low
 
   * create an empty swapfile on ext2/3 images by default, we care for use
-    or deletion on first boot, this cuts of 3min from the first boot of 
+    or deletion on first boot, this cuts of 3min from the first boot of
     preinstalled images.
 
  -- Oliver Grawert <ogra@ubuntu.com>  Wed, 23 Feb 2011 14:55:06 +0100
@@ -2630,7 +2631,7 @@ livecd-rootfs (1.158) natty; urgency=low
 
 livecd-rootfs (1.157) natty; urgency=low
 
-  * drop IGEPv2 x-loader and u-boot from livefs.sh, they are not in main 
+  * drop IGEPv2 x-loader and u-boot from livefs.sh, they are not in main
     and thus break image builds
 
  -- Oliver Grawert <ogra@ubuntu.com>  Sat, 12 Feb 2011 13:32:59 +0100
@@ -2780,7 +2781,7 @@ livecd-rootfs (1.137) maverick; urgency=low
  -- Colin Watson <cjwatson@ubuntu.com>  Wed, 21 Jul 2010 07:52:47 +0100
 
 livecd-rootfs (1.136) maverick; urgency=low
- 
+
   * One more fix; if we're asking apt to downgrade packages, we have to
     explicitly pass --force-yes.
 
@@ -3148,7 +3149,7 @@ livecd-rootfs (0.91) karmic; urgency=low
   * Remove subarch hack for ubuntu-mid, it was never used.
 
   [ Mario Limonciello ]
-  * Remove metapackage hack for mythbuntu.  Now that tasks are published for 
+  * Remove metapackage hack for mythbuntu.  Now that tasks are published for
     multiverse, it's no longer necessary.
 
  -- Mario Limonciello <superm1@ubuntu.com>  Thu, 13 Aug 2009 22:19:26 -0500
@@ -3206,7 +3207,7 @@ livecd-rootfs (0.86) karmic; urgency=low
   * livecd.sh: Support kubuntu-netbook, drop kubuntu-kde4
 
   [ Steve Kowalik ]
-  * livecd.sh: Switch UNR to using ubuntu-netbook-remix^ and unr-live^. 
+  * livecd.sh: Switch UNR to using ubuntu-netbook-remix^ and unr-live^.
 
  -- Steve Kowalik <stevenk@ubuntu.com>  Tue, 30 Jun 2009 12:13:08 +1000
 
@@ -3301,14 +3302,14 @@ livecd-rootfs (0.75) jaunty; urgency=low
 
   [ Steve Kowalik ]
   * BuildLiveCD: Add ubuntu-netbook-remix.
-  * livecd.sh: Support ubuntu-netbook-remix. 
+  * livecd.sh: Support ubuntu-netbook-remix.
 
  -- Steve Kowalik <stevenk@ubuntu.com>  Sat, 10 Jan 2009 11:08:29 +1100
 
 livecd-rootfs (0.74) jaunty; urgency=low
 
   * For mythbuntu livefs builds, we don't have tasks yet. They will be
-    coming in a future build of Soyuz, so for now just use the 
+    coming in a future build of Soyuz, so for now just use the
     metapackages instead.
 
  -- Mario Limonciello <superm1@ubuntu.com>  Sat, 08 Nov 2008 09:49:56 -0600
