@@ -1,4 +1,4 @@
-livecd-rootfs (2.500.2+xenial19ubports5) xenial; urgency=medium
+livecd-rootfs (2.500.2+xenial19ubports5) vivid; urgency=medium
 
   * Remove hardcoded packages that goes into costum so they lands into main rootfs
   * Bump version
