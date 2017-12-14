@@ -422,6 +422,11 @@ case $PROJECT in
 		OPTS="${OPTS:+$OPTS }--compression gzip"
 		OPTS="${OPTS:+$OPTS }--system normal"
 		OPTS="${OPTS:+$OPTS }--zsync false"
+		
+		# FORCE MIRROR TO BE USED!.!...!?
+		OPTS="${OPTS:+$OPTS }--mirror-chroot-security ${MIRROR}"
+		OPTS="${OPTS:+$OPTS }--mirror-binary-security ${MIRROR}"
+        OPTS="${OPTS:+$OPTS }--mirror-binary ${MIRROR}"
 
 		# TODO cjwatson 2014-07-17: This is a bit of an abuse of
 		# SUBPROJECT, but it's a handy thing that launchpad-buildd
