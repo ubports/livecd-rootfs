@@ -1,0 +1,3 @@
+Package: *
+Pin: origin repo.ubports.com
+Pin-Priority: 2000
