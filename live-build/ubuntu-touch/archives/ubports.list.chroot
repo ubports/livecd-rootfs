@@ -1,1 +1,2 @@
 deb http://repo.ubports.com/ xenial main
+deb http://repo.ubports.com/ xenial-7.1-caf-sudoku main

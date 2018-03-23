@@ -1,3 +1,7 @@
 Package: *
 Pin: origin repo.ubports.com
 Pin-Priority: 2000
+
+Package: *
+Pin: release a=xenial-7.1-caf-sudoku
+Pin-Priority: 2001
