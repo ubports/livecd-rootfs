@@ -1,0 +1,6 @@
+#!/bin/sh -x
+
+# Setup missing directories and symlinks as
+# commonly required by the device adaptations.
+
+ln -s /android/odm /odm
