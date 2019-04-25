@@ -7,5 +7,5 @@
 
 echo "Removing /var/lib/apt/lists/* from the binary"
 find binary/boot/filesystem.dir/var/lib/apt/lists/ -type f | xargs rm -f
-echo "Removing /var/cache/apt/*pkgcache.bin from the binary"
-rm -f binary/boot/filesystem.dir/var/cache/apt/*pkgcache.bin
+echo "Removing apt caches from the binary"
+find binary/boot/filesystem.dir/var/cache/apt/ -type f | xargs rm -f
