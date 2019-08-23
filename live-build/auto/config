@@ -416,6 +416,9 @@ case $PROJECT in
 		if [ "$SUBPROJECT" = "hybris" ]; then
 			HINTS="$HINTS ubuntu-touch-hybris"
 		fi
+                if [ "$SUBPROJECT" = "mainline" ]; then
+                        HINTS="$HINTS ubuntu-touch-mainline"
+                fi
 		add_package install ubuntu-minimal ubuntu-touch systemd-sysv- $HINTS
 
 		COMPONENTS='main restricted universe'
