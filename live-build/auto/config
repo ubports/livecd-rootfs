@@ -408,11 +408,6 @@ case $PROJECT in
 
 	ubuntu-touch|ubuntu-touch-custom)
 		HINTS="packagekit ubuntu-system-settings-online-accounts"
-		case $ARCH in
-		    amd64|i386)
-			HINTS="$HINTS qml-module-ubuntu-components-gles unity8"
-			;;
-		esac
 		if [ "$SUBPROJECT" = "hybris" ]; then
 			HINTS="$HINTS ubuntu-touch-hybris"
 		fi
