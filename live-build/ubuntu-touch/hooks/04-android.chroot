@@ -1,0 +1,13 @@
+#!/bin/sh -x
+
+# Several issues with the rootfs have come up,
+# the image failed to boot due to little permission
+# mismatches. Unlike hoping these issues stop coming up
+# now and again just apply tweaks to the rootfs.
+
+# Fix permissions for dbus-daemon-launcher-helper
+chown root:messagebus /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+chmod 4754 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+
+# Avoid system-image-dbus crashing over and over
+mkdir -p /etc/system-image/config.d

@@ -191,7 +191,7 @@ case $PROJECT in
 				add_package install ubuntu-desktop \
 					xserver-xorg-core-omap-revert \
 					xserver-xorg-video-omap-revert \
-					xserver-xorg-input-evdev-omap-revert 
+					xserver-xorg-input-evdev-omap-revert
 				;;
 			*)
 				add_task install ubuntu-desktop
@@ -222,7 +222,7 @@ case $PROJECT in
 				add_package install kubuntu-desktop \
 					xserver-xorg-core-omap-revert \
 					xserver-xorg-video-omap-revert \
-					xserver-xorg-input-evdev-omap-revert 
+					xserver-xorg-input-evdev-omap-revert
 				;;
 			*)
 				add_task install kubuntu-desktop
@@ -371,7 +371,7 @@ case $PROJECT in
 		        add_package install libpam-systemd
                         # no Task: header yet
                         add_package install ubuntu-snappy
- 
+
                         # no minimal as we want to be really minimal
 		        #add_task install minimal
 			add_task install ubuntu-core
@@ -388,7 +388,7 @@ case $PROJECT in
                         # generic kernel etc
                         KERNEL_FLAVOURS=generic
                         case $ARCH in
-			    i386|amd64)	
+			    i386|amd64)
 			        add_package install grub-pc
                                 ;;
                             armhf)
@@ -408,11 +408,12 @@ case $PROJECT in
 
 	ubuntu-touch|ubuntu-touch-custom)
 		HINTS="packagekit ubuntu-system-settings-online-accounts"
-		case $ARCH in
-		    amd64|i386)
-			HINTS="$HINTS qml-module-ubuntu-components-gles unity8"
-			;;
-		esac
+		if [ "$SUBPROJECT" = "hybris" ]; then
+			HINTS="$HINTS ubuntu-touch-hybris"
+		fi
+                if [ "$SUBPROJECT" = "mainline" ]; then
+                        HINTS="$HINTS ubuntu-touch-mainline"
+                fi
 		add_package install ubuntu-minimal ubuntu-touch systemd-sysv- $HINTS
 
 		COMPONENTS='main restricted universe'
@@ -504,7 +505,7 @@ case $ARCH in
 				;;
 			nexus7)
 				COMPONENTS='main restricted universe multiverse'
-				add_package install zram-config abootimg 
+				add_package install zram-config abootimg
 				add_package install nvidia-tegra3 ubuntu-defaults-nexus7
 				add_package live ac100-tarball-installer
 				BINARY_REMOVE_LINUX=false
