@@ -1,3 +1,7 @@
 Package: *
-Pin: origin repo.ubports.com
-Pin-Priority: 2000
+Pin: release o=UBports,a=xenial_-_qt-5-12
+Pin-Priority: 1000
+
+Package: *
+Pin: release o=UBports,a=xenial
+Pin-Priority: 900
