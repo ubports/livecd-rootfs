@@ -1,3 +1,9 @@
+livecd-rootfs (2.700.2+xenial0ubports0) xenial; urgency=medium
+
+  * Add xenial_-_edge packages to rootfs.
+
+ -- Dalton Durst <dalton@ubports.com>  Thu, 31 Dec 2020 09:34:52 -0600
+
 livecd-rootfs (2.500.2+xenial19ubports5) xenial; urgency=medium
 
   * Remove hardcoded packages that goes into costum so they lands into main rootfs
