@@ -5,3 +5,13 @@ Pin-Priority: 1000
 Package: *
 Pin: release o=UBports,a=xenial
 Pin-Priority: 900
+
+Package: *
+Pin: origin repo.ubports.com
+Pin: release o=UBports,a=xenial_-_edge_-_pine
+Pin-Priority: 2002
+
+Package: *
+Pin: origin repo.ubports.com
+Pin: release o=UBports,a=xenial_-_edge_-_wayland
+Pin-Priority: 2002
