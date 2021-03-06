@@ -8,9 +8,11 @@ CLICKARCH=$(dpkg --print-architecture)
 
 click_uri=https://ci.ubports.com/job/app-importer/lastSuccessfulBuild/artifact/xenial/
 if [ "$CLICKARCH" = "arm64" ]; then
-    click_list=$click_uri/click_list.arm64
+    click_list="$click_uri/click_list.arm64"
+elif [ "$CLICKARCH" = "amd64" ]; then
+    click_list="$click_uri/click_list.amd64"
 else
-    click_list=$click_uri/click_list
+    click_list="$click_uri/click_list"
 fi
 click_db=/usr/share/click/preinstalled
 click_db_custom=/custom/click
