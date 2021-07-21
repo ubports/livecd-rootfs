@@ -59,6 +59,7 @@ systemd-network:x:112:117:systemd Network Management,,,:/run/systemd/netif:/bin/
 systemd-resolve:x:113:118:systemd Resolver,,,:/run/systemd/resolve:/bin/false
 systemd-bus-proxy:x:114:119:systemd Bus Proxy,,,:/run/systemd:/bin/false
 dhcpd:x:115:122::/var/run:/bin/false
+nm-openvpn:x:116:123:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/bin/false
 EOF
 else
     echo "/etc/passwd post-debootstrap hash doesn't match record" >&2
@@ -107,6 +108,7 @@ systemd-network:*:16372:0:99999:7:::
 systemd-resolve:*:16372:0:99999:7:::
 systemd-bus-proxy:*:16372:0:99999:7:::
 dhcpd:*:16921:0:99999:7:::
+nm-openvpn:*:18829:0:99999:7:::
 EOF
 else
     echo "/etc/shadow post-debootstrap hash doesn't match record" >&2
@@ -193,6 +195,7 @@ systemd-bus-proxy:x:119:
 systemd-journal-remote:x:120:
 input:x:121:
 dhcpd:x:122:
+nm-openvpn:x:123:
 EOF
 else
     echo "/etc/group post-debootstrap hash doesn't match record" >&2
@@ -279,6 +282,7 @@ systemd-bus-proxy:!::
 systemd-journal-remote:!::
 input:!::
 dhcpd:!::
+nm-openvpn:!::
 EOF
 else
     echo "/etc/gshadow post-debootstrap hash doesn't match record" >&2
@@ -309,6 +313,10 @@ chmod 750 /var/lib/lightdm
 mkdir -p /var/lib/usermetrics
 chown usermetrics:usermetrics /var/lib/usermetrics
 chmod 750 /var/lib/usermetrics
+
+mkdir -p /var/lib/openvpn/chroot
+chown nm-openvpn:nm-openvpn /var/lib/openvpn/chroot
+chmod 755 /var/lib/openvpn/chroot
 
 echo "adjusting ownership of /var/log" >&2
 chown root:syslog /var/log
